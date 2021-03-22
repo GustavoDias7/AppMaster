@@ -375,6 +375,10 @@ button:active {
     margin-bottom: 40px;
 }
 
+#hero-content .main-button {
+    margin: 0 2px;
+}
+
 /* === ABOUT === */
 
 #about-content {
@@ -465,6 +469,7 @@ button:active {
 .mini-button {
     width: 15px;
     height: 15px;
+    margin: 0 2px;
     border-radius: 50%;
     border: none;
     background-color: #b461f786;
