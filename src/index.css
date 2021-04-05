@@ -347,7 +347,7 @@ button:active {
     justify-content: center;
     align-items: center;
     min-height: 408px;
-    background-image: url('../assets/background.jpg');
+    background-image: url('./background.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -407,6 +407,10 @@ button:active {
 
 #about-list-header li {
     margin-bottom: 16px;
+}
+
+#about-list-header .sm-icon {
+    color: #7B2CBF;
 }
 
 /* === SERVICES === */
@@ -562,11 +566,13 @@ button:active {
     align-self: center;
 }
 
-.product-buttons a {
+.product-image-zoom,
+.product-page {
     display: inline-block;
     font-size: 20px;
     cursor: pointer;
     margin: 5px;
+    background-color: unset;
 }
 
 /* === TESTIMONIALS === */
@@ -792,7 +798,7 @@ button:active {
     }
 
     .navbar ul li {
-        margin-top: 30px;
+        margin-top: 22px;
     }
 
     .social-links-container {

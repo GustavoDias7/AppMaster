@@ -11,3 +11,5 @@ function hamburger() {
         navbar.classList.remove('active-translate');
     });
 }
+
+export default hamburger;

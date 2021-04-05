@@ -41,3 +41,5 @@ function imageZoom() {
         imageZoom.classList.remove('active-display');
     })
 }
+
+export default imageZoom;

@@ -88,5 +88,6 @@ function clientCarousel() {
         /* restart auto loop */
         startAutoSlide();
     }
-
 }
+
+export default clientCarousel;
