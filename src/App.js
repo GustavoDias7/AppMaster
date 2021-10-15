@@ -11,10 +11,11 @@ import Cta from "./components/Cta";
 import OurTeam from "./components/OurTeam";
 import Contacts from "./components/Contacts";
 import MainFooter from "./components/MainFooter";
+import { GlobalStorage } from "./Context/GlobalContext";
 
 const App = () => {
   return (
-    <>
+    <GlobalStorage>
       <Topbar />
       <MainHeader />
       <Hero />
@@ -27,7 +28,7 @@ const App = () => {
       <OurTeam />
       <Contacts />
       <MainFooter />
-    </>
+    </GlobalStorage>
   );
 };
 

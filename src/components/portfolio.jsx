@@ -1,70 +1,141 @@
 import React from "react";
+import product1 from "../Assets/Images/product-01.png";
+import product2 from "../Assets/Images/product-02.png";
+import product3 from "../Assets/Images/product-03.png";
+import product4 from "../Assets/Images/product-04.png";
+import product5 from "../Assets/Images/product-05.png";
+import product6 from "../Assets/Images/product-06.jpg";
+import product7 from "../Assets/Images/product-07.jpg";
+import product8 from "../Assets/Images/product-08.jpg";
+import product9 from "../Assets/Images/product-09.jpg";
+
+const Context = React.createContext();
+const PortContext = ({ children }) => {
+  const [zoom, setZoom] = React.useState(false);
+  const [indexImage, setIndexImage] = React.useState(0);
+
+  return (
+    <Context.Provider value={{ zoom, setZoom, indexImage, setIndexImage }}>
+      {children}
+    </Context.Provider>
+  );
+};
 
 /* === PORTFOLIO === */
 const productContent = [
   {
-    image: "./img/image-01.png",
     title: "Finished Task",
     type: "Website",
-    link: "#",
+    image: product1,
   },
   {
-    image: "./img/image-02.png",
     title: "Cutter Pro",
     type: "Desktop",
-    link: "#",
+    image: product2,
   },
   {
-    image: "./img/image-03.png",
     title: "Slide Pointer",
     type: "Desktop",
-    link: "#",
+    image: product3,
   },
   {
-    image: "./img/image-04.png",
     title: "Buscadores",
     type: "Website",
-    link: "#",
+    image: product4,
   },
   {
-    image: "./img/image-05.png",
     title: "VanArsdel",
     type: "Website",
-    link: "#",
+    image: product5,
   },
   {
-    image: "./img/image-06.jpg",
     title: "Android Here",
     type: "Website",
-    link: "#",
+    image: product6,
   },
   {
-    image: "./img/image-07.jpg",
     title: "Earthquake",
     type: "App",
-    link: "#",
+    image: product7,
   },
   {
-    image: "./img/image-08.jpg",
     title: "Ben Kolde",
     type: "Website",
-    link: "#",
+    image: product8,
   },
   {
-    image: "./img/image-09.jpg",
     title: "Easy Weather",
     type: "App",
-    link: "#",
+    image: product9,
   },
 ];
 
-const Product = ({ content }) => {
-  const { image, title, type, link } = content;
+const ImageZoom = ({ productContent }) => {
+  const { zoom, setZoom, indexImage, setIndexImage } =
+    React.useContext(Context);
+
+  function clickOverlay({ target, currentTarget }) {
+    if (target === currentTarget) {
+      setZoom(false);
+    }
+  }
+
+  function nextImage() {
+    setIndexImage(
+      indexImage + 1 === productContent.length ? 0 : indexImage + 1
+    );
+  }
+
+  function prevImage() {
+    setIndexImage(
+      indexImage - 1 === -1 ? productContent.length - 1 : indexImage - 1
+    );
+  }
+
+  return (
+    <div
+      className={`image-zoom${zoom ? " active" : ""}`}
+      onClick={clickOverlay}
+    >
+      <div className="image-zoom-content">
+        <button className="close-zoom" onClick={() => setZoom(false)}>
+          X
+        </button>
+        <img
+          className="zoom-image"
+          src={productContent[indexImage].image}
+          alt="Zoom"
+        />
+        <button className="prev-arrow" onClick={prevImage}>
+          <i class="fas fa-arrow-left"></i>
+        </button>
+        <button className="next-arrow" onClick={nextImage}>
+          <i class="fas fa-arrow-right"></i>
+        </button>
+      </div>
+    </div>
+  );
+};
+
+const Product = ({ content, index }) => {
+  const { setZoom, setIndexImage } = React.useContext(Context);
+  const { image, title, type } = content;
+
+  function handleClick() {
+    setZoom(true);
+    setIndexImage(index);
+  }
+
   return (
     <figure className="product">
       <div className="product-content">
         <div className="product-image-container">
-          <img className="product-image" src={image} alt={title} />
+          <img
+            className="product-image"
+            src={image}
+            alt={title}
+            onClick={handleClick}
+          />
         </div>
         <div className="product-description">
           <header className="product-header">
@@ -72,10 +143,10 @@ const Product = ({ content }) => {
             <p>{type}</p>
           </header>
           <div className="product-buttons">
-            <button className="product-image-zoom">
+            <button className="product-image-zoom" onClick={handleClick}>
               <i className="fas fa-search-plus zoom-icon"></i>
             </button>
-            <a href={link} className="product-page">
+            <a href="/" className="product-page">
               <i className="fas fa-link"></i>
             </a>
           </div>
@@ -87,40 +158,43 @@ const Product = ({ content }) => {
 
 const Portfolio = () => {
   return (
-    <section id="portfolio">
-      <div className="main-container">
-        <div className="section-header">
-          <h2>Nosso portfólio</h2>
-          <p>
-            Confira o resultado do nosso trabalho, com alguns exemplos das
-            nossas aplicações mais renomadas do mercado, que trouxeram
-            resultados incríveis, impactando milhões de pessoas pelo Brasil e
-            pelo mundo.
-          </p>
-        </div>
-
-        <div className="product-container">
-          {productContent.map((content) => (
-            <Product content={content} key={content.title} />
-          ))}
-        </div>
-
-        <div className="image-zoom">
-          <div className="image-zoom-content">
-            <img className="zoom-image" src="" alt="Imagem do zoom" />
+    <PortContext>
+      <section id="portfolio">
+        <div className="main-container">
+          <div className="section-header">
+            <h2>Nosso portfólio</h2>
+            <p>
+              Confira o resultado do nosso trabalho, com alguns exemplos das
+              nossas aplicações mais renomadas do mercado, que trouxeram
+              resultados incríveis, impactando milhões de pessoas pelo Brasil e
+              pelo mundo.
+            </p>
           </div>
-          <div className="zoom-buttons">
-            <button className="previous-image">
-              <i className="fas fa-chevron-left"></i>
-            </button>
-            <button className="next-image">
-              <i className="fas fa-chevron-right"></i>
-            </button>
-            <button className="close-zoom">X</button>
+
+          <div className="product-container">
+            {productContent.map((content, index) => (
+              <Product content={content} key={content.title} index={index} />
+            ))}
           </div>
+
+          <div className="image-zoom">
+            <div className="image-zoom-content">
+              <img className="zoom-image" src="" alt="Imagem do zoom" />
+            </div>
+            <div className="zoom-buttons">
+              <button className="previous-image">
+                <i className="fas fa-chevron-left"></i>
+              </button>
+              <button className="next-image">
+                <i className="fas fa-chevron-right"></i>
+              </button>
+              <button className="close-zoom">X</button>
+            </div>
+          </div>
+          <ImageZoom productContent={productContent} />
         </div>
-      </div>
-    </section>
+      </section>
+    </PortContext>
   );
 };
 
