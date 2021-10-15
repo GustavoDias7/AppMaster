@@ -107,10 +107,10 @@ const ImageZoom = ({ productContent }) => {
           alt="Zoom"
         />
         <button className="prev-arrow" onClick={prevImage}>
-          <i class="fas fa-arrow-left"></i>
+          <i className="fas fa-arrow-left"></i>
         </button>
         <button className="next-arrow" onClick={nextImage}>
-          <i class="fas fa-arrow-right"></i>
+          <i className="fas fa-arrow-right"></i>
         </button>
       </div>
     </div>

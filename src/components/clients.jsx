@@ -1,4 +1,71 @@
 import React from "react";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Slider from "react-slick";
+import client1 from "../Assets/Images/client-logo-01.svg";
+import client2 from "../Assets/Images/client-logo-02.svg";
+import client3 from "../Assets/Images/client-logo-03.svg";
+import client4 from "../Assets/Images/client-logo-04.svg";
+import client5 from "../Assets/Images/client-logo-05.svg";
+import client6 from "../Assets/Images/client-logo-06.svg";
+import client7 from "../Assets/Images/client-logo-07.svg";
+import client8 from "../Assets/Images/client-logo-08.svg";
+
+const clients = [
+  {
+    src: client1,
+    alt: "Client name 1",
+  },
+  {
+    src: client2,
+    alt: "Client name 2",
+  },
+  {
+    src: client3,
+    alt: "Client name 3",
+  },
+  {
+    src: client4,
+    alt: "Client name 4",
+  },
+  {
+    src: client5,
+    alt: "Client name 5",
+  },
+  {
+    src: client6,
+    alt: "Client name 6",
+  },
+  {
+    src: client7,
+    alt: "Client name 7",
+  },
+  {
+    src: client8,
+    alt: "Client name 8",
+  },
+];
+
+const settings = {
+  dots: false,
+  arrows: false,
+  infinite: true,
+  slidesToShow: 5,
+  slidesToScroll: 1,
+  autoplay: true,
+  speed: 2000,
+  autoplaySpeed: 2000,
+  cssEase: "linear",
+  responsive: [
+    {
+      breakpoint: 991,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 1,
+      },
+    },
+  ],
+};
 
 const Clients = () => (
   <section id="clients">
@@ -12,73 +79,19 @@ const Clients = () => (
         </p>
       </div>
       <div id="client-carousel-container">
-        <div id="slider">
-          <div className="logo-container">
-            <img
-              src="./img/client-logo-01.svg"
-              alt=""
-              className="client-logo"
-            />
-          </div>
-          <div className="logo-container">
-            <img
-              src="./img/client-logo-02.svg"
-              alt=""
-              className="client-logo"
-            />
-          </div>
-          <div className="logo-container">
-            <img
-              src="./img/client-logo-03.svg"
-              alt=""
-              className="client-logo"
-            />
-          </div>
-          <div className="logo-container">
-            <img
-              src="./img/client-logo-04.svg"
-              alt=""
-              className="client-logo"
-            />
-          </div>
-          <div className="logo-container">
-            <img
-              src="./img/client-logo-05.svg"
-              alt=""
-              className="client-logo"
-            />
-          </div>
-          <div className="logo-container">
-            <img
-              src="./img/client-logo-06.svg"
-              alt=""
-              className="client-logo"
-            />
-          </div>
-          <div className="logo-container">
-            <img
-              src="./img/client-logo-07.svg"
-              alt=""
-              className="client-logo"
-            />
-          </div>
-          <div className="logo-container">
-            <img
-              src="./img/client-logo-08.svg"
-              alt=""
-              className="client-logo"
-            />
-          </div>
-        </div>
-        <div id="mini-button-container">
-          <button className="mini-button active-mini-button"></button>
-          <button className="mini-button"></button>
-          <button className="mini-button"></button>
-          <button className="mini-button"></button>
-          <button className="mini-button"></button>
-          <button className="mini-button"></button>
-          <button className="mini-button"></button>
-        </div>
+        <Slider {...settings}>
+          {clients.map((client) => {
+            return (
+              <div key={client.alt} className="logo-container">
+                <img
+                  src={client.src}
+                  alt={client.alt}
+                  className="client-logo"
+                />
+              </div>
+            );
+          })}
+        </Slider>
       </div>
     </div>
   </section>

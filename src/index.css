@@ -362,51 +362,12 @@ button {
   overflow: hidden;
 }
 
-#slider {
-  display: flex;
-  transition: 0.5s ease;
-  transform: translateX(0);
-}
-
-.logo-container {
-  min-width: calc(100% / 5);
-  max-width: calc(100% / 5);
-  text-align: center;
-}
-
 .client-logo {
+  min-width: 80%;
   width: 80%;
+  margin: auto;
   opacity: 0.6;
   transition: 0.3s ease-out;
-}
-
-.client-logo:hover {
-  opacity: 1;
-}
-
-#mini-button-container {
-  text-align: center;
-}
-
-.mini-button {
-  width: 15px;
-  height: 15px;
-  margin: 0 2px;
-  border-radius: 50%;
-  border: none;
-  background-color: #b461f786;
-  cursor: pointer;
-  transition: 0.2s ease-out;
-}
-
-.mini-button:hover {
-  background-color: #7b2cbf;
-}
-
-.mini-button:nth-child(5),
-.mini-button:nth-child(6),
-.mini-button:nth-child(7) {
-  display: none;
 }
 
 /* === PORTIFOLIO === */
@@ -894,17 +855,8 @@ button {
     font-size: 48px;
   }
 
-  .logo-container {
-    min-width: calc(100% / 4);
-    max-width: calc(100% / 4);
-  }
-
   .product {
     width: 100%;
-  }
-
-  .mini-button:nth-child(5) {
-    display: inline;
   }
 
   .contact-card-container {
@@ -925,15 +877,6 @@ button {
 }
 
 @media (max-width: 575px) {
-  .logo-container {
-    min-width: calc(100% / 3);
-    max-width: calc(100% / 3);
-  }
-
-  .mini-button:nth-child(6) {
-    display: inline;
-  }
-
   #cta {
     text-align: center;
   }
@@ -961,15 +904,6 @@ button {
   .services-card i {
     margin-right: 0;
     margin-bottom: 10px;
-  }
-
-  .logo-container {
-    min-width: calc(100% / 2);
-    max-width: calc(100% / 2);
-  }
-
-  .mini-button:nth-child(7) {
-    display: inline;
   }
 
   .team-card {
