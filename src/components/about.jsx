@@ -1,14 +1,13 @@
-const About = ({ aboutTopics }) => {
-  const AboutListHeader = () => {
-    const aboutTopicsList = aboutTopics.map((topic, index) => (
-      <li key={index}>
-        <i className="far fa-check-circle sm-icon"></i> {topic}
-      </li>
-    ));
+import React from "react";
 
-    return <ul id="about-list-header">{aboutTopicsList}</ul>;
-  };
+/* === ABOUT === */
+const aboutTopics = [
+  "Estamos há mais de 7 anos no mercado de tecnologia, que conta com 3 escritórios espalhados pelo Rio de Janeiro.",
+  "Trabalhamos com as tecnologias mais modernas do mercado, para atender às diversas necessidades dos clientes.",
+  "Começamos como uma pequena agência de 3 programadores, e dessa época em diante, tivemos vários desafios que nos fizeram crescer e nos desenvolver como profissionais da área de fabricação de software.",
+];
 
+const About = () => {
   return (
     <section id="about">
       <div className="main-container">
@@ -24,7 +23,16 @@ const About = ({ aboutTopics }) => {
                 websites e aplicações desktop.
               </p>
             </div>
-            <AboutListHeader />
+            <ul id="about-list-header">
+              {aboutTopics.map((topic, index) => {
+                return (
+                  <li key={index}>
+                    <i className="far fa-check-circle sm-icon"></i>
+                    <p>{topic}</p>
+                  </li>
+                );
+              })}
+            </ul>
           </div>
         </div>
       </div>

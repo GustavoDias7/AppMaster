@@ -1,3 +1,5 @@
+import React from "react";
+
 const Clients = () => (
   <section id="clients">
     <div className="main-container">

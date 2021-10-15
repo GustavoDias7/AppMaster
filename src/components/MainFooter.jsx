@@ -1,3 +1,5 @@
+import React from "react";
+
 const MainFooter = () => (
   <footer id="main-footer">
     <div className="main-container">

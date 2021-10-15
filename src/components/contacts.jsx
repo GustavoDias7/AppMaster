@@ -1,5 +1,6 @@
-const Contacts = ({ contactInfo }) => {
-  const { address, phoneNumber, email } = contactInfo;
+import React from "react";
+
+const Contacts = () => {
   return (
     <section id="contact-us">
       <div className="main-container">
@@ -14,17 +15,17 @@ const Contacts = ({ contactInfo }) => {
           <div className="contact-card">
             <i className="fas fa-map-marker-alt md-icon"></i>
             <h3>Endereço</h3>
-            <p>{address}</p>
+            <p>Rio de Janeiro-RJ, Brasil</p>
           </div>
           <div className="contact-card">
             <i className="fas fa-mobile-alt md-icon"></i>
             <h3>Telefone</h3>
-            <p>{phoneNumber}</p>
+            <p>+55 (21)4002-8922</p>
           </div>
           <div className="contact-card">
             <i className="far fa-envelope md-icon"></i>
             <h3>Email</h3>
-            <p>{email}</p>
+            <p>appmaster@gmail.com</p>
           </div>
         </div>
         <form id="contact-form">

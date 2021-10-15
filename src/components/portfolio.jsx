@@ -1,36 +1,91 @@
-const Portfolio = ({ productContent }) => {
-  const Product = ({ content }) => {
-    const { image, title, type, link } = content;
+import React from "react";
 
-    return (
-      <figure className="product">
-        <div className="product-content">
-          <div className="product-image-container">
-            <img className="product-image" src={image} alt={title} />
-          </div>
-          <div className="product-description">
-            <header className="product-header">
-              <h3>{title}</h3>
-              <p>{type}</p>
-            </header>
-            <div className="product-buttons">
-              <button className="product-image-zoom">
-                <i className="fas fa-search-plus zoom-icon"></i>
-              </button>
-              <a href={link} className="product-page">
-                <i className="fas fa-link"></i>
-              </a>
-            </div>
+/* === PORTFOLIO === */
+const productContent = [
+  {
+    image: "./img/image-01.png",
+    title: "Finished Task",
+    type: "Website",
+    link: "#",
+  },
+  {
+    image: "./img/image-02.png",
+    title: "Cutter Pro",
+    type: "Desktop",
+    link: "#",
+  },
+  {
+    image: "./img/image-03.png",
+    title: "Slide Pointer",
+    type: "Desktop",
+    link: "#",
+  },
+  {
+    image: "./img/image-04.png",
+    title: "Buscadores",
+    type: "Website",
+    link: "#",
+  },
+  {
+    image: "./img/image-05.png",
+    title: "VanArsdel",
+    type: "Website",
+    link: "#",
+  },
+  {
+    image: "./img/image-06.jpg",
+    title: "Android Here",
+    type: "Website",
+    link: "#",
+  },
+  {
+    image: "./img/image-07.jpg",
+    title: "Earthquake",
+    type: "App",
+    link: "#",
+  },
+  {
+    image: "./img/image-08.jpg",
+    title: "Ben Kolde",
+    type: "Website",
+    link: "#",
+  },
+  {
+    image: "./img/image-09.jpg",
+    title: "Easy Weather",
+    type: "App",
+    link: "#",
+  },
+];
+
+const Product = ({ content }) => {
+  const { image, title, type, link } = content;
+  return (
+    <figure className="product">
+      <div className="product-content">
+        <div className="product-image-container">
+          <img className="product-image" src={image} alt={title} />
+        </div>
+        <div className="product-description">
+          <header className="product-header">
+            <h3>{title}</h3>
+            <p>{type}</p>
+          </header>
+          <div className="product-buttons">
+            <button className="product-image-zoom">
+              <i className="fas fa-search-plus zoom-icon"></i>
+            </button>
+            <a href={link} className="product-page">
+              <i className="fas fa-link"></i>
+            </a>
           </div>
         </div>
-      </figure>
-    );
-  };
+      </div>
+    </figure>
+  );
+};
 
-  const productList = productContent.map((content) => (
-    <Product content={content} key={content.title} />
-  ));
-
+const Portfolio = () => {
   return (
     <section id="portfolio">
       <div className="main-container">
@@ -43,7 +98,13 @@ const Portfolio = ({ productContent }) => {
             pelo mundo.
           </p>
         </div>
-        <div className="product-container">{productList}</div>
+
+        <div className="product-container">
+          {productContent.map((content) => (
+            <Product content={content} key={content.title} />
+          ))}
+        </div>
+
         <div className="image-zoom">
           <div className="image-zoom-content">
             <img className="zoom-image" src="" alt="Imagem do zoom" />
