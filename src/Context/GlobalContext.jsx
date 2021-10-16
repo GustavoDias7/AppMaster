@@ -3,7 +3,9 @@ import React from "react";
 const GlobalContext = React.createContext();
 
 export const GlobalStorage = ({ children }) => {
-  const values = {};
+  const [sidebar, setSidebar] = React.useState(false);
+
+  const values = { sidebar, setSidebar };
   return (
     <GlobalContext.Provider value={values}>{children}</GlobalContext.Provider>
   );

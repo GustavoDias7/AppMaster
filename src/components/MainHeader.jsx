@@ -1,6 +1,19 @@
 import React from "react";
+import useApp from "../Context/GlobalContext";
+
+const navLinks = [
+  ["Home", "root"],
+  ["Sobre", "about"],
+  ["Serviços", "services"],
+  ["Clientes", "clients"],
+  ["Portfólio", "portfolio"],
+  ["Time", "our-team"],
+  ["Contatos", "contact-us"],
+];
 
 const MainHeader = () => {
+  const { setSidebar } = useApp();
+
   return (
     <header id="main-header">
       <div className="main-container">
@@ -10,63 +23,18 @@ const MainHeader = () => {
           </a>
           <nav className="navbar">
             <ul>
-              <li>
-                <a href="#root">Home</a>
-              </li>
-              <li>
-                <a href="#about">Sobre</a>
-              </li>
-              <li>
-                <a href="#services">Serviços</a>
-              </li>
-              <li>
-                <a href="#clients">Clientes</a>
-              </li>
-              <li>
-                <a href="#portfolio">Portfólio</a>
-              </li>
-              <li>
-                <a href="#our-team">Time</a>
-              </li>
-              <li>
-                <a href="#contact-us">Contatos</a>
-              </li>
-              <li className="social-links-container">
-                <div className="social-links">
-                  <a
-                    href="https://www.twitter.com/"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <i className="fab fa-twitter sm-icon"></i>
-                  </a>
-                  <a
-                    href="https://www.facebook.com/"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <i className="fab fa-facebook sm-icon"></i>
-                  </a>
-                  <a
-                    href="https://www.instagram.com/"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <i className="fab fa-instagram sm-icon"></i>
-                  </a>
-                  <a
-                    href="https://www.linkedin.com/"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <i className="fab fa-linkedin sm-icon"></i>
-                  </a>
-                </div>
-              </li>
-              <button className="navbar-close">X</button>
+              {navLinks.map((link) => {
+                return (
+                  <li>
+                    <a onClick={() => setSidebar(false)} href={"#" + link[1]}>
+                      {link[0]}
+                    </a>
+                  </li>
+                );
+              })}
             </ul>
           </nav>
-          <button className="navbar-hamburger">
+          <button className="hamburger" onClick={() => setSidebar(true)}>
             <i className="fas fa-bars"></i>
           </button>
         </div>

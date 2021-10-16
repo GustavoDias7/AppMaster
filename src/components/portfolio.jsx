@@ -75,8 +75,6 @@ const ImageZoom = ({ productContent }) => {
     React.useContext(Context);
 
   function clickOverlay(e) {
-    console.log(e.currentTarget);
-    console.log(e.target);
     if (e.target === e.currentTarget) {
       setZoom(false);
     }
