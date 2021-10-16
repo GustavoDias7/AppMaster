@@ -33,7 +33,7 @@ const Sidebar = () => {
         <ul>
           {navLinks.map((link) => {
             return (
-              <li>
+              <li key={link}>
                 <a onClick={() => setSidebar(false)} href={"#" + link[1]}>
                   {link[0]}
                 </a>
