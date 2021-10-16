@@ -74,8 +74,10 @@ const ImageZoom = ({ productContent }) => {
   const { zoom, setZoom, indexImage, setIndexImage } =
     React.useContext(Context);
 
-  function clickOverlay({ target, currentTarget }) {
-    if (target === currentTarget) {
+  function clickOverlay(e) {
+    console.log(e.currentTarget);
+    console.log(e.target);
+    if (e.target === e.currentTarget) {
       setZoom(false);
     }
   }
@@ -175,21 +177,6 @@ const Portfolio = () => {
             {productContent.map((content, index) => (
               <Product content={content} key={content.title} index={index} />
             ))}
-          </div>
-
-          <div className="image-zoom">
-            <div className="image-zoom-content">
-              <img className="zoom-image" src="" alt="Imagem do zoom" />
-            </div>
-            <div className="zoom-buttons">
-              <button className="previous-image">
-                <i className="fas fa-chevron-left"></i>
-              </button>
-              <button className="next-image">
-                <i className="fas fa-chevron-right"></i>
-              </button>
-              <button className="close-zoom">X</button>
-            </div>
           </div>
           <ImageZoom productContent={productContent} />
         </div>

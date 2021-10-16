@@ -395,6 +395,12 @@ button {
   transform: translateY(-10%);
 }
 
+@media (max-width: 768px) {
+  .product-content {
+    transform: translateY(-10%);
+  }
+}
+
 .product-image-container {
   position: absolute;
   top: 0;
@@ -429,6 +435,12 @@ button {
   transform: translateY(-60%);
 }
 
+@media (max-width: 768px) {
+  .product-content .product-description {
+    transform: translateY(-60%);
+  }
+}
+
 .product-description h3,
 .product-description p,
 .product-description i {
@@ -459,11 +471,13 @@ button {
 .image-zoom {
   opacity: 0;
   pointer-events: none;
-  user-select: none;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
   height: 100%;
   transition: 0.3s;
@@ -472,21 +486,18 @@ button {
 .image-zoom.active {
   opacity: 1;
   pointer-events: all;
-  user-select: all;
 }
 
 .image-zoom-content {
   display: flex;
   align-items: center;
-  margin: auto;
   width: min-content;
-  height: 100%;
 }
 
 .zoom-image {
   max-width: 95vw;
   max-height: 95vh;
-  transition: 0.2;
+  transition: 0.2s;
 }
 
 .prev-arrow,
