@@ -555,16 +555,21 @@ button {
 #cta {
   background-color: #7b2cbf;
   padding: 40px 0;
+  text-align: center;
 }
 
-#cta h2,
-#cta p {
+#cta h2 {
   color: #fff;
 }
 
-.cta-content {
-  display: flex;
-  align-items: center;
+#cta p {
+  color: #fff;
+  max-width: 750px;
+  margin: auto;
+}
+
+.cta-button {
+  margin: 32px auto 0;
 }
 
 /* === OUR-TEAM === */
@@ -885,20 +890,6 @@ button {
 
   #name {
     margin-right: 0;
-  }
-}
-
-@media (max-width: 575px) {
-  #cta {
-    text-align: center;
-  }
-
-  .cta-content {
-    flex-direction: column;
-  }
-
-  .cta-button {
-    margin: 32px auto 0;
   }
 }
 
