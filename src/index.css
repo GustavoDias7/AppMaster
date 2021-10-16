@@ -941,3 +941,15 @@ button {
     width: 100%;
   }
 }
+@media (max-width: 320px) {
+  #topbar-content {
+    height: auto;
+    padding: 5px 0;
+  }
+  #contact-info-container {
+    flex-direction: column;
+  }
+  #contact-info-container .contact-info {
+    margin: 0 auto;
+  }
+}
