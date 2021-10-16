@@ -1,4 +1,5 @@
 import React from "react";
+import Slider from "react-slick";
 
 const testimonialInfo = [
   {
@@ -24,18 +25,38 @@ const testimonialInfo = [
   },
 ];
 
+const settings = {
+  dots: true,
+  arrows: false,
+  infinite: true,
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  speed: 500,
+  responsive: [
+    {
+      breakpoint: 991,
+      settings: {
+        slidesToShow: 1,
+        arrows: true,
+      },
+    },
+  ],
+};
+
 const TestimonialsCard = ({ testi }) => {
   const { quote, avatar, name, prof } = testi;
   return (
     <div className="testimonial-card">
-      <div className="quote">
-        <i className="fas fa-quote-left"></i>
-        <p>{quote}</p>
-        <i className="fas fa-quote-right"></i>
+      <div className="content">
+        <div className="quote">
+          <i className="fas fa-quote-left"></i>
+          <p>{quote}</p>
+          <i className="fas fa-quote-right"></i>
+        </div>
+        <img className="avatar" src={avatar} alt="avatar" />
+        <h3>{name}</h3>
+        <p>{prof}</p>
       </div>
-      <img className="avatar" src={avatar} alt="avatar" />
-      <h3>{name}</h3>
-      <p>{prof}</p>
     </div>
   );
 };
@@ -51,11 +72,11 @@ const Testimonials = () => {
             prestados.
           </p>
         </div>
-        <div id="testimonials-container">
+        <Slider {...settings} id="testimonials-container">
           {testimonialInfo.map((testi) => (
             <TestimonialsCard testi={testi} key={testi.name} />
           ))}
-        </div>
+        </Slider>
       </div>
     </section>
   );

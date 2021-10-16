@@ -515,18 +515,13 @@ button {
 }
 
 /* === TESTIMONIALS === */
-
-#testimonials-container {
-  display: flex;
-  justify-content: space-between;
-}
-
-.testimonial-card {
+.testimonial-card .content {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  max-width: 310px;
+  max-width: 90%;
+  margin: 0 auto;
   padding: 30px 10px;
   border-radius: 10px;
   border: 2px solid rgba(73, 78, 92, 0.2);
@@ -538,8 +533,12 @@ button {
 }
 
 .quote i {
-  font-size: 32px;
+  font-size: 24px;
   color: #7a2cbf25;
+}
+
+.quote p {
+  padding: 0 10px;
 }
 
 .avatar {
@@ -793,10 +792,6 @@ button {
   .product {
     width: 350px;
   }
-
-  .testimonial-card {
-    max-width: 370px;
-  }
 }
 
 @media (max-width: 991px) {
@@ -834,13 +829,35 @@ button {
     width: 340px;
   }
 
-  #testimonials-container {
-    display: block;
+  .testimonial-card .content {
+    margin: 0 10px;
+    max-width: 100%;
   }
 
-  .testimonial-card {
-    margin: 30px 0;
-    max-width: 100%;
+  .slick-prev,
+  .slick-next {
+    z-index: 1 !important;
+    transform: scale(1.5) !important;
+  }
+  .slick-prev::before,
+  .slick-next::before {
+    color: #7b2cbf !important;
+  }
+  .slick-prev {
+    left: 0px !important;
+  }
+  .slick-next {
+    right: 0px !important;
+  }
+  .slick-dots li {
+    transform: scale(2);
+  }
+  .slick-dots li button::before {
+    transition: 0.2s;
+    color: #4e1183 !important;
+  }
+  .slick-dots li.slick-active button::before {
+    color: #4e1183 !important;
   }
 
   .team-card {
