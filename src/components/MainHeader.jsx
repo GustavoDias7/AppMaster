@@ -18,7 +18,7 @@ const MainHeader = () => {
     <header id="main-header">
       <div className="main-container">
         <div id="main-header-content">
-          <a href="./index.html">
+          <a className="logo" href="/">
             <h1>AppMaster</h1>
           </a>
           <nav className="navbar">

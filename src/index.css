@@ -41,8 +41,22 @@ li {
 a {
   font-size: 15px;
   font-weight: 600;
-  transition: 0.2s ease-out;
+  transition: 0.2s 0.2s ease-out;
   outline: none;
+}
+
+i,
+p {
+  transition: 0.2s ease-out;
+}
+
+a:hover p,
+a:active p,
+a:focus p,
+a:hover i,
+a:active i,
+a:focus i {
+  color: #b361f7;
 }
 
 /* buttons */
@@ -96,6 +110,8 @@ button {
   transition: 0.2s;
 }
 
+.hamburger:focus i,
+.hamburger:active i,
 .hamburger:hover i {
   color: #b361f7;
 }
@@ -116,10 +132,6 @@ button {
 .sm-icon {
   font-size: 20px;
   transition: 0.2s ease-out;
-}
-
-.sm-icon:hover {
-  color: #7b2cbf;
 }
 
 /* sizes and spaces of the page */
@@ -198,9 +210,16 @@ button {
   height: 80px;
 }
 
-#main-header-content h1 {
+#main-header-content .logo h1 {
   color: #7b2cbf;
   user-select: none;
+  transition: 0.2s ease-in-out;
+}
+
+#main-header-content .logo:focus h1,
+#main-header-content .logo:active h1,
+#main-header-content .logo:hover h1 {
+  color: #b361f7;
 }
 
 .navbar ul {
@@ -413,6 +432,12 @@ button {
   color: #fff;
 }
 
+.product-description i:focus,
+.product-description i:active,
+.product-description i:hover {
+  color: #b361f7;
+}
+
 .product-header {
   display: flex;
   flex-direction: column;
@@ -463,7 +488,6 @@ button {
 .zoom-image {
   max-width: 95vw;
   max-height: 95vh;
-  transition: 0.2s;
 }
 
 .prev-arrow,
@@ -626,6 +650,7 @@ button {
 
 .team-descripttion .social-links a {
   padding: 0 6px;
+  border: none;
 }
 
 .team-descripttion .sm-icon {
@@ -633,7 +658,7 @@ button {
 }
 
 .team-descripttion .sm-icon:hover {
-  color: #ddd;
+  color: #b361f7;
 }
 
 /* === CONTACT-US === */
@@ -792,12 +817,13 @@ button {
 }
 
 .sidebar a,
-.sidebar .sm-icon {
+.sidebar i {
   color: #fff;
 }
 
-.sidebar a:hover,
-.sidebar .sm-icon:hover {
+.sidebar a:focus,
+.sidebar a:active,
+.sidebar a:hover {
   color: #b361f7;
 }
 
