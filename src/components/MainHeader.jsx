@@ -34,7 +34,11 @@ const MainHeader = () => {
               })}
             </ul>
           </nav>
-          <button className="hamburger" onClick={() => setSidebar(true)}>
+          <button
+            className="hamburger"
+            onClick={() => setSidebar(true)}
+            aria-label="Menu lateral"
+          >
             <i className="fas fa-bars"></i>
           </button>
         </div>

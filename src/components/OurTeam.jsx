@@ -54,22 +54,48 @@ const TeamCard = ({ team }) => {
   return (
     <figure className="team-card">
       <div className="image-team-container">
-        <img src={image} alt={name} className="image-team" />
+        <img
+          src={image}
+          alt={name}
+          className="image-team"
+          width="273"
+          height="328"
+        />
       </div>
       <div className="team-descripttion">
         <h3>{name}</h3>
         <p>{type}</p>
         <div className="social-links">
-          <a href={links.twitter} target="_blank" rel="noreferrer">
+          <a
+            href={links.twitter}
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Link do nosso twitter"
+          >
             <i className="fab fa-twitter sm-icon"></i>
           </a>
-          <a href={links.facebook} target="_blank" rel="noreferrer">
+          <a
+            href={links.facebook}
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Link do nosso facebook"
+          >
             <i className="fab fa-facebook sm-icon"></i>
           </a>
-          <a href={links.instagram} target="_blank" rel="noreferrer">
+          <a
+            href={links.instagram}
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Link do nosso instagram"
+          >
             <i className="fab fa-instagram sm-icon"></i>
           </a>
-          <a href={links.linkedin} target="_blank" rel="noreferrer">
+          <a
+            href={links.linkedin}
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Link do nosso linkedin"
+          >
             <i className="fab fa-linkedin sm-icon"></i>
           </a>
         </div>

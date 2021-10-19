@@ -719,15 +719,12 @@ button {
 
 #main-footer {
   padding: 30px 0;
-  background-color: #b361f7;
+  background-color: #7b2cbf;
 }
 
-.main-footer-content {
-  text-align: center;
-}
-
-.main-footer-content p {
+#main-footer p {
   color: #fff;
+  text-align: center;
 }
 
 /* SIDEBAR */

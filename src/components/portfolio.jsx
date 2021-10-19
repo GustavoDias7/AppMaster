@@ -106,10 +106,18 @@ const ImageZoom = ({ productContent }) => {
           src={productContent[indexImage].image}
           alt="Zoom"
         />
-        <button className="prev-arrow" onClick={prevImage}>
+        <button
+          className="prev-arrow"
+          onClick={prevImage}
+          aria-label="Imagem anterior"
+        >
           <i className="fas fa-arrow-left"></i>
         </button>
-        <button className="next-arrow" onClick={nextImage}>
+        <button
+          className="next-arrow"
+          onClick={nextImage}
+          aria-label="Próxima imagem"
+        >
           <i className="fas fa-arrow-right"></i>
         </button>
       </div>
@@ -143,10 +151,18 @@ const Product = ({ content, index }) => {
             <p>{type}</p>
           </header>
           <div className="product-buttons">
-            <button className="product-image-zoom" onClick={handleClick}>
+            <button
+              className="product-image-zoom"
+              onClick={handleClick}
+              aria-label="Ativar zoom da imagem"
+            >
               <i className="fas fa-search-plus zoom-icon"></i>
             </button>
-            <a href="/" className="product-page">
+            <a
+              href="/"
+              className="product-page"
+              aria-label={"Link para o produto " + title}
+            >
               <i className="fas fa-link"></i>
             </a>
           </div>
