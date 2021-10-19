@@ -1,6 +1,64 @@
 import React from "react";
+import useApp from "../Context/GlobalContext";
+import useForm from "../hooks/useForm";
+
+const Input = (props) => {
+  const { type = "text", id, placeholder, state } = props;
+  const { value, handleChange, handleBlur, error } = state;
+
+  return (
+    <div className="input-container">
+      <input
+        id={id}
+        type={type}
+        placeholder={placeholder}
+        value={value}
+        onChange={handleChange}
+        onBlur={handleBlur}
+      />
+      {error && <span className="error">{error}</span>}
+    </div>
+  );
+};
+
+const Textarea = (props) => {
+  const { id, placeholder, state } = props;
+  const { value, handleChange, handleBlur, error } = state;
+
+  return (
+    <div className="input-container">
+      <textarea
+        id={id}
+        placeholder={placeholder}
+        value={value}
+        onChange={handleChange}
+        onBlur={handleBlur}
+      />
+      {error && <span className="error">{error}</span>}
+    </div>
+  );
+};
 
 const Contacts = () => {
+  const { SentPopup, setSentPopup } = useApp();
+  const name = useForm();
+  const email = useForm("email");
+  const subject = useForm();
+  const message = useForm();
+  const fields = [name, email, subject, message];
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    let validateAll = true;
+    fields.forEach((field) => {
+      if (field.validate() === false) validateAll = false;
+    });
+    if (validateAll) {
+      setSentPopup(true);
+      fields.forEach((field) => field.setValue(""));
+    }
+  }
+
   return (
     <section id="contact-us">
       <div className="main-container">
@@ -28,27 +86,47 @@ const Contacts = () => {
             <p>appmaster@gmail.com</p>
           </div>
         </div>
-        <form id="contact-form">
+
+        <form id="contact-form" onSubmit={handleSubmit}>
           <ul>
-            <li className="row-contact-form">
-              <input id="name" type="text" placeholder="Seu nome" />
-              <input type="email" placeholder="Seu Email" />
-            </li>
-            <li className="row-contact-form">
-              <input type="text" placeholder="Assunto" />
-            </li>
-            <li className="row-contact-form">
-              <textarea placeholder="Mensagem"></textarea>
-            </li>
-            <li className="row-contact-form">
-              <input
-                className="main-button contact-form-btn"
-                type="button"
-                value="Enviar"
+            <li>
+              <Input id="name" state={name} placeholder="Seu nome" />
+              <Input
+                type={"email"}
+                id="email"
+                state={email}
+                placeholder="Seu Email"
               />
+            </li>
+            <li>
+              <Input
+                id="subject"
+                state={subject}
+                placeholder="Assunto do Email"
+              />
+            </li>
+            <li>
+              <Textarea
+                id="message"
+                state={message}
+                placeholder="Sua mensagem"
+              />
+            </li>
+            <li>
+              <button className="main-button" type="submit">
+                Enviar
+              </button>
             </li>
           </ul>
         </form>
+
+        <SentPopup className={"sent-popup"}>
+          <h2>Sucesso!!!</h2>
+          <p>
+            Seu e-mail foi enviado. Nossa equipe entrará em contato o mais
+            rápido possível.
+          </p>
+        </SentPopup>
       </div>
     </section>
   );
