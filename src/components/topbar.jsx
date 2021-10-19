@@ -7,14 +7,14 @@ const Topbar = () => {
       <div className="main-container">
         <div id="topbar-content">
           <div id="contact-info-container">
-            <div className="contact-info">
+            <a href="mailto:appmaster@gmail.com" className="contact-info">
               <i className="far fa-envelope sm-icon"></i>
               <p>appmaster@gmail.com</p>
-            </div>
-            <div className="contact-info">
+            </a>
+            <a href="tel:552140028922" className="contact-info">
               <i className="fas fa-mobile-alt sm-icon"></i>
               <p>+55 (21)4002-8922</p>
-            </div>
+            </a>
           </div>
           <SocialLinks />
         </div>
