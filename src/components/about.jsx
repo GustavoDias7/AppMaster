@@ -1,4 +1,5 @@
 import React from "react";
+import AboutImg from "../Assets/Images/aboult-image.jpg";
 
 /* === ABOUT === */
 const aboutTopics = [
@@ -13,7 +14,7 @@ const About = () => {
       <div className="main-container">
         <div id="about-content">
           <div id="about-image">
-            <img src="./img/aboult-image.jpg" alt="" />
+            <img src={AboutImg} alt="Sobre" />
           </div>
           <div id="about-text">
             <div id="about-text-header">

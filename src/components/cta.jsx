@@ -1,7 +1,6 @@
 import React from "react";
 
 const Cta = () => {
-  const link = "#";
   return (
     <section id="cta">
       <div className="main-container">
@@ -11,7 +10,7 @@ const Cta = () => {
             Temos o prazer de te convidar para um papo descompromissado, no
             intuito de entender suas ideias e torná-las reais.
           </p>
-          <a href={link} className="main-button cta-button">
+          <a href="#" className="main-button cta-button">
             Saiba mais
           </a>
         </div>

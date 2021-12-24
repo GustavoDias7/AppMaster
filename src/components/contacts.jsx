@@ -2,8 +2,7 @@ import React from "react";
 import useApp from "../Context/GlobalContext";
 import useForm from "../hooks/useForm";
 
-const Input = (props) => {
-  const { type = "text", id, placeholder, state } = props;
+const Input = ({ type = "text", id, placeholder, state }) => {
   const { value, handleChange, handleBlur, error } = state;
 
   return (
@@ -21,8 +20,7 @@ const Input = (props) => {
   );
 };
 
-const Textarea = (props) => {
-  const { id, placeholder, state } = props;
+const Textarea = ({ id, placeholder, state }) => {
   const { value, handleChange, handleBlur, error } = state;
 
   return (

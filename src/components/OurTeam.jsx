@@ -1,9 +1,13 @@
 import React from "react";
+import Avatar01 from "../Assets/Images/avatar-05.jpg";
+import Avatar02 from "../Assets/Images/avatar-04.jpg";
+import Avatar03 from "../Assets/Images/avatar-06.jpg";
+import Avatar04 from "../Assets/Images/avatar-07.jpg";
 
 /* === OUR-TEAM === */
 const teamInfos = [
   {
-    image: "./img/avatar-05.jpg",
+    image: Avatar01,
     name: "Carlos Vargas",
     type: "CEO",
     links: {
@@ -14,7 +18,7 @@ const teamInfos = [
     },
   },
   {
-    image: "./img/avatar-04.jpg",
+    image: Avatar02,
     name: "Mia Sarile",
     type: "CTO",
     links: {
@@ -25,7 +29,7 @@ const teamInfos = [
     },
   },
   {
-    image: "./img/avatar-06.jpg",
+    image: Avatar03,
     name: "Rafaela Gomes",
     type: "Gerente de Projetos",
     links: {
@@ -36,7 +40,7 @@ const teamInfos = [
     },
   },
   {
-    image: "./img/avatar-07.jpg",
+    image: Avatar04,
     name: "Igor Rodrigues",
     type: "Gerente de Marketing",
     links: {

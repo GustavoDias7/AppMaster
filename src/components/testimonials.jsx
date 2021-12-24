@@ -1,25 +1,28 @@
 import React from "react";
 import Slider from "react-slick";
+import Avatar1 from "../Assets/Images/avatar-01.jpg";
+import Avatar2 from "../Assets/Images/avatar-02.jpg";
+import Avatar3 from "../Assets/Images/avatar-03.jpg";
 
 const testimonialInfo = [
   {
     quote:
       "Tive muita sorte de encontrar a AppMaster, eu estava buscando uma empresa de confiança que faria o serviço bem feito e por sorte, encontrei eles. Obrigado a todos pelo ótimo e excelente trabalho.",
-    avatar: "./img/avatar-01.jpg",
+    avatar: Avatar1,
     name: "Lucas Marques",
     prof: "Designer Gráfico",
   },
   {
     quote:
       "Meu sonho desde que me formei era montar a minha própria empresa, e com a AppMaster isso foi possível, graças ao ecommerce que eles desenvolveram exclusivamente para mim e minha equipe.",
-    avatar: "./img/avatar-02.jpg",
+    avatar: Avatar2,
     name: "Luna Marrer",
     prof: "Empresária",
   },
   {
     quote:
       "Sem a AppMaste minha empresa não teria sobrevivido. Eu estava quase falindo e através da consultoria e melhorias feitas no meu website tudo foi de mau a muito melhor. Eles são os melhores.",
-    avatar: "./img/avatar-03.jpg",
+    avatar: Avatar3,
     name: "Gabriel Sales",
     prof: "Empresário",
   },
