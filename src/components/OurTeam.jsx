@@ -9,9 +9,9 @@ const teamInfos = [
   {
     image: Avatar01,
     name: "Carlos Vargas",
-    type: "CEO",
+    type: "CEO e CTO",
     links: {
-      twitter: "https://www.twitter.com/carlos",
+      twitter: "https://www.twitter.com/",
       facebook: "https://www.facebook.com/",
       instagram: "https://www.instagram.com/",
       linkedin: "https://www.linkedin.com/",
@@ -20,9 +20,9 @@ const teamInfos = [
   {
     image: Avatar02,
     name: "Mia Sarile",
-    type: "CTO",
+    type: "Gerente de Marketing",
     links: {
-      twitter: "https://www.twitter.com/mia",
+      twitter: "https://www.twitter.com/",
       facebook: "https://www.facebook.com/",
       instagram: "https://www.instagram.com/",
       linkedin: "https://www.linkedin.com/",
@@ -31,9 +31,9 @@ const teamInfos = [
   {
     image: Avatar03,
     name: "Rafaela Gomes",
-    type: "Gerente de Projetos",
+    type: "Desenvolvedora Android",
     links: {
-      twitter: "https://www.twitter.com/rafaela",
+      twitter: "https://www.twitter.com/",
       facebook: "https://www.facebook.com/",
       instagram: "https://www.instagram.com/",
       linkedin: "https://www.linkedin.com/",
@@ -42,9 +42,9 @@ const teamInfos = [
   {
     image: Avatar04,
     name: "Igor Rodrigues",
-    type: "Gerente de Marketing",
+    type: "Desenvolvedor IOS",
     links: {
-      twitter: "https://www.twitter.com/igor",
+      twitter: "https://www.twitter.com/",
       facebook: "https://www.facebook.com/",
       instagram: "https://www.instagram.com/",
       linkedin: "https://www.linkedin.com/",

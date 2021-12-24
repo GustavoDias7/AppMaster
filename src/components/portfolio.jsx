@@ -1,10 +1,4 @@
 import React from "react";
-import product1 from "../Assets/Images/product-01.png";
-import product2 from "../Assets/Images/product-02.png";
-import product3 from "../Assets/Images/product-03.png";
-import product4 from "../Assets/Images/product-04.png";
-import product5 from "../Assets/Images/product-05.png";
-import product6 from "../Assets/Images/product-06.jpg";
 import product7 from "../Assets/Images/product-07.jpg";
 import product8 from "../Assets/Images/product-08.jpg";
 import product9 from "../Assets/Images/product-09.jpg";
@@ -24,48 +18,18 @@ const PortContext = ({ children }) => {
 /* === PORTFOLIO === */
 const productContent = [
   {
-    title: "Finished Task",
-    type: "Website",
-    image: product1,
-  },
-  {
-    title: "Cutter Pro",
-    type: "Desktop",
-    image: product2,
-  },
-  {
-    title: "Slide Pointer",
-    type: "Desktop",
-    image: product3,
-  },
-  {
-    title: "Buscadores",
-    type: "Website",
-    image: product4,
-  },
-  {
-    title: "VanArsdel",
-    type: "Website",
-    image: product5,
-  },
-  {
-    title: "Android Here",
-    type: "Website",
-    image: product6,
-  },
-  {
     title: "Earthquake",
-    type: "App",
+    type: "Finanças",
     image: product7,
   },
   {
     title: "Ben Kolde",
-    type: "Website",
+    type: "Notícias",
     image: product8,
   },
   {
     title: "Easy Weather",
-    type: "App",
+    type: "Previsão do tempo",
     image: product9,
   },
 ];
@@ -182,8 +146,7 @@ const Portfolio = () => {
             <p>
               Confira o resultado do nosso trabalho, com alguns exemplos das
               nossas aplicações mais renomadas do mercado, que trouxeram
-              resultados incríveis, impactando milhões de pessoas pelo Brasil e
-              pelo mundo.
+              resultados incríveis, impactando milhares de pessoas.
             </p>
           </div>
 

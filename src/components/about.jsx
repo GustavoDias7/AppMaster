@@ -3,9 +3,9 @@ import AboutImg from "../Assets/Images/aboult-image.jpg";
 
 /* === ABOUT === */
 const aboutTopics = [
-  "Estamos há mais de 7 anos no mercado de tecnologia, que conta com 3 escritórios espalhados pelo Rio de Janeiro.",
+  "Estamos há mais de 2 anos no mercado de tecnologia, que conta com 1 escritórios espalhados pelo Rio de Janeiro.",
   "Trabalhamos com as tecnologias mais modernas do mercado, para atender às diversas necessidades dos clientes.",
-  "Começamos como uma pequena agência de 3 programadores, e dessa época em diante, tivemos vários desafios que nos fizeram crescer e nos desenvolver como profissionais da área de fabricação de software.",
+  "Tivemos vários desafios que nos fizeram crescer e nos desenvolver como profissionais da área de fabricação de software.",
 ];
 
 const About = () => {
@@ -20,8 +20,7 @@ const About = () => {
             <div id="about-text-header">
               <h2>Conheça um pouco mais sobre a AppMaster</h2>
               <p>
-                Somos uma startup fabricante de software como aplicativos,
-                websites e aplicações desktop.
+                Somos uma startup fabricante de aplicativos para android e IOS.
               </p>
             </div>
             <ul id="about-list-header">

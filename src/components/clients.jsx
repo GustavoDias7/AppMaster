@@ -73,9 +73,9 @@ const Clients = () => (
       <div className="section-header">
         <h2>Clientes</h2>
         <p>
-          Temos orgulho de fazer parceria com os maiores players do mercado em
-          diversos segmentos. Nós tornamos seus negócios ainda mais promissores
-          com o nosso serviços e estratégia de negócio.
+          Temos orgulho de fazer parceria com os maiores empresas do mercado.
+          Nós tornamos seus negócios ainda mais promissores com o nosso serviços
+          e estratégia de negócio.
         </p>
       </div>
       <div id="client-carousel-container">

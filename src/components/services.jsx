@@ -2,28 +2,28 @@ import React from "react";
 
 const ServicesContent = [
   {
-    title: "Aplicativo",
+    title: "Notícias",
     content:
-      "Desenvolvemos a versão Android e IOS do seu app e disponibilizamos na Play Store e na App Store.",
-    icon: "fas fa-mobile-alt",
+      "Os seus clientes mais assíduos podem acompanhar todas as novidades da sua empresa, como promoções, novos produtos e etc.",
+    icon: "far fa-file-alt",
   },
   {
-    title: "Websites",
+    title: "Finanças",
     content:
-      "Seu site será encontrado na internet e irá atrair potenciais compradores e investidores.",
-    icon: "far fa-file-word",
+      "Aplicativos para fazer transações seguras, organizar as finanças pessoais e evitar gastos desnecessários.",
+    icon: "fas fa-dollar-sign",
   },
   {
-    title: "Desktop",
+    title: "Games",
     content:
-      "Uma solução para ser instalada e utilizada diretamente no computador, sem a necessidade de ter internet.",
-    icon: "fas fa-desktop",
+      "Produzimos diversos tipos de jogos para celular, dentre eles: estratégia, aventura, cartas, música, puzzle e multiplayer.",
+    icon: "fas fa-gamepad",
   },
   {
-    title: "Consultoria",
+    title: "Comida e bebidas",
     content:
-      "Se você já tem um app e não sabe o que fazer, nós elaboramos a melhor estratégia para seu negócio.",
-    icon: "far fa-smile",
+      "Para você que tem seu restaurante e quer que seus clientes façam pedidos com apenas 1 clique.",
+    icon: "fas fa-utensils",
   },
 ];
 
