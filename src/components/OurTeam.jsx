@@ -1,8 +1,8 @@
 import React from "react";
-import Avatar01 from "../Assets/Images/avatar-05.jpg";
-import Avatar02 from "../Assets/Images/avatar-04.jpg";
-import Avatar03 from "../Assets/Images/avatar-06.jpg";
-import Avatar04 from "../Assets/Images/avatar-07.jpg";
+import Avatar01 from "../assets/images/avatar-05.jpg";
+import Avatar02 from "../assets/images/avatar-04.jpg";
+import Avatar03 from "../assets/images/avatar-06.jpg";
+import Avatar04 from "../assets/images/avatar-07.jpg";
 
 /* === OUR-TEAM === */
 const teamInfos = [
