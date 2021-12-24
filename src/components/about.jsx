@@ -1,5 +1,6 @@
 import React from "react";
 import AboutImg from "../assets/images/aboult-image.jpg";
+import Title from "./Title";
 
 /* === ABOUT === */
 const aboutTopics = [
@@ -18,7 +19,7 @@ const About = () => {
           </div>
           <div id="about-text">
             <div id="about-text-header">
-              <h2>Conheça um pouco mais sobre a AppMaster</h2>
+              <Title>Conheça um pouco mais sobre a AppMaster</Title>
               <p>
                 Somos uma startup fabricante de aplicativos para android e IOS.
               </p>

@@ -10,6 +10,7 @@ import client5 from "../assets/images/client-logo-05.svg";
 import client6 from "../assets/images/client-logo-06.svg";
 import client7 from "../assets/images/client-logo-07.svg";
 import client8 from "../assets/images/client-logo-08.svg";
+import Title from "./Title";
 
 const clients = [
   {
@@ -71,7 +72,7 @@ const Clients = () => (
   <section id="clients">
     <div className="main-container">
       <div className="section-header">
-        <h2>Clientes</h2>
+        <Title>Clientes</Title>
         <p>
           Temos orgulho de fazer parceria com os maiores empresas do mercado.
           Nós tornamos seus negócios ainda mais promissores com o nosso serviços

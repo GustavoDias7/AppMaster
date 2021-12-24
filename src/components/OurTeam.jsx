@@ -3,6 +3,7 @@ import Avatar01 from "../assets/images/avatar-05.jpg";
 import Avatar02 from "../assets/images/avatar-04.jpg";
 import Avatar03 from "../assets/images/avatar-06.jpg";
 import Avatar04 from "../assets/images/avatar-07.jpg";
+import Title from "./Title";
 
 /* === OUR-TEAM === */
 const teamInfos = [
@@ -112,7 +113,7 @@ const OurTeam = () => {
   return (
     <section id="our-team">
       <div className="main-container">
-        <h2>Nosso Time</h2>
+        <Title>Nosso Time</Title>
         <div className="team-container">
           {teamInfos.map((team) => (
             <TeamCard team={team} key={team.name} />

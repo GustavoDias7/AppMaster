@@ -1,4 +1,5 @@
 import React from "react";
+import Title from "./Title";
 
 const ServicesContent = [
   {
@@ -44,7 +45,7 @@ const Services = () => {
   return (
     <section id="services">
       <div className="main-container">
-        <h2>Serviços</h2>
+        <Title>Serviços</Title>
         <div id="services-card-container">
           {ServicesContent.map((myContent) => (
             <ServicesCard myContent={myContent} key={myContent.title} />

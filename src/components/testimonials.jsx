@@ -3,6 +3,7 @@ import Slider from "react-slick";
 import Avatar1 from "../assets/images/avatar-01.jpg";
 import Avatar2 from "../assets/images/avatar-02.jpg";
 import Avatar3 from "../assets/images/avatar-03.jpg";
+import Title from "./Title";
 
 const testimonialInfo = [
   {
@@ -69,7 +70,7 @@ const Testimonials = () => {
     <section id="testimonials">
       <div className="main-container">
         <div className="section-header">
-          <h2>Depoimentos</h2>
+          <Title>Depoimentos</Title>
           <p>
             Veja a opinião sincera dos nossos clientes a respeito dos serviços
             prestados.

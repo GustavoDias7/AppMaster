@@ -1,6 +1,7 @@
 import React from "react";
 import useApp from "../context/GlobalContext";
 import useForm from "../hooks/useForm";
+import Title from "./Title";
 
 const Input = ({ type = "text", id, placeholder, state }) => {
   const { value, handleChange, handleBlur, error } = state;
@@ -61,7 +62,7 @@ const Contacts = () => {
     <section id="contact-us">
       <div className="main-container">
         <div className="section-header">
-          <h2>Contatos</h2>
+          <Title>Contatos</Title>
           <p>
             Entre em contato com a nossa equipe caso tenha alguma dúvida ou
             interesse em nossos serviços.

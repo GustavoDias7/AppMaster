@@ -1,10 +1,11 @@
 import React from "react";
+import Title from "./Title";
 
 const Cta = () => {
   return (
     <section id="cta">
       <div className="main-container">
-        <h2>Fale conosco</h2>
+        <Title>Fale conosco</Title>
         <div className="cta-content">
           <p>
             Temos o prazer de te convidar para um papo descompromissado, no
