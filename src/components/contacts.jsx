@@ -1,5 +1,5 @@
 import React from "react";
-import useApp from "../Context/GlobalContext";
+import useApp from "../context/GlobalContext";
 import useForm from "../hooks/useForm";
 
 const Input = ({ type = "text", id, placeholder, state }) => {

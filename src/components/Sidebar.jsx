@@ -1,5 +1,5 @@
 import React from "react";
-import useApp from "../Context/GlobalContext";
+import useApp from "../context/GlobalContext";
 import SocialLinks from "./SocialLinks";
 
 const navLinks = [
