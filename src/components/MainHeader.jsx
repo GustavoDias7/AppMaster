@@ -1,15 +1,6 @@
 import React from "react";
 import useApp from "../context/GlobalContext";
-
-const navLinks = [
-  ["Home", "root"],
-  ["Sobre", "about"],
-  ["Serviços", "services"],
-  ["Clientes", "clients"],
-  ["Portfólio", "portfolio"],
-  ["Time", "our-team"],
-  ["Contatos", "contact-us"],
-];
+import { NavLinks } from "./NavLinks";
 
 const MainHeader = () => {
   const { setSidebar } = useApp();
@@ -21,19 +12,7 @@ const MainHeader = () => {
           <a className="logo" href="/">
             <h1>AppMaster</h1>
           </a>
-          <nav className="navbar">
-            <ul>
-              {navLinks.map((link) => {
-                return (
-                  <li key={link}>
-                    <a onClick={() => setSidebar(false)} href={"#" + link[1]}>
-                      {link[0]}
-                    </a>
-                  </li>
-                );
-              })}
-            </ul>
-          </nav>
+          <NavLinks />
           <button
             className="hamburger"
             onClick={() => setSidebar(true)}

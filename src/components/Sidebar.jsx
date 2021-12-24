@@ -1,21 +1,12 @@
 import React from "react";
 import useApp from "../context/GlobalContext";
+import { NavLinks } from "./NavLinks";
 import SocialLinks from "./SocialLinks";
-
-const navLinks = [
-  ["Home", "root"],
-  ["Sobre", "about"],
-  ["Serviços", "services"],
-  ["Clientes", "clients"],
-  ["Portfólio", "portfolio"],
-  ["Time", "our-team"],
-  ["Contatos", "contact-us"],
-];
 
 const Sidebar = () => {
   const { sidebar, setSidebar } = useApp();
 
-  function clickOverlay(e) {
+  function clickOutside(e) {
     if (e.target === e.currentTarget) {
       setSidebar(false);
     }
@@ -24,23 +15,13 @@ const Sidebar = () => {
   return (
     <div
       className={`sidebar${sidebar ? " active" : ""}`}
-      onClick={clickOverlay}
+      onClick={clickOutside}
     >
       <nav className="content">
         <button className="close" onClick={() => setSidebar(false)}>
           X
         </button>
-        <ul>
-          {navLinks.map((link) => {
-            return (
-              <li key={link}>
-                <a onClick={() => setSidebar(false)} href={"#" + link[1]}>
-                  {link[0]}
-                </a>
-              </li>
-            );
-          })}
-        </ul>
+        <NavLinks isSidebar={true} />
         <SocialLinks />
       </nav>
     </div>
