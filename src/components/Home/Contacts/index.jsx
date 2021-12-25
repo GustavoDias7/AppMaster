@@ -1,63 +1,45 @@
-import React from "react";
+import React, { useRef } from "react";
 import useApp from "context/GlobalContext";
-import useForm from "hooks/useForm";
 import Title from "components/common/Title";
 import Button from "components/common/Buttons/Button";
-
-const Input = ({ type = "text", id, placeholder, state }) => {
-  const { value, handleChange, handleBlur, error } = state;
-
-  return (
-    <div className="input-container">
-      <input
-        id={id}
-        type={type}
-        placeholder={placeholder}
-        value={value}
-        onChange={handleChange}
-        onBlur={handleBlur}
-      />
-      {error && <span className="error">{error}</span>}
-    </div>
-  );
-};
-
-const Textarea = ({ id, placeholder, state }) => {
-  const { value, handleChange, handleBlur, error } = state;
-
-  return (
-    <div className="input-container">
-      <textarea
-        id={id}
-        placeholder={placeholder}
-        value={value}
-        onChange={handleChange}
-        onBlur={handleBlur}
-      />
-      {error && <span className="error">{error}</span>}
-    </div>
-  );
-};
+import Input from "components/common/Form/Input";
+import Textarea from "components/common/Form/Textarea";
+import FlexWrapper from "components/common/FlexWrapper";
+import { Form } from "@unform/web";
+import * as yup from "yup";
+import { contactSchema } from "utils/schemas";
 
 const Contacts = () => {
   const { SentPopup, setSentPopup } = useApp();
-  const name = useForm();
-  const email = useForm("email");
-  const subject = useForm();
-  const message = useForm();
-  const fields = [name, email, subject, message];
+  const formRef = useRef(null);
 
-  function handleSubmit(e) {
-    e.preventDefault();
-    let validateAll = true;
-    fields.forEach((field) => {
-      if (field.validate() === false) validateAll = false;
-    });
-    if (validateAll) {
+  const handleFormSubmit = async (data) => {
+    try {
+      // Remove all previous errors
+      formRef.current.setErrors({});
+
+      const schema = yup.object().shape(contactSchema);
+
+      await schema.validate(data, {
+        abortEarly: false,
+      });
+
+      // Validation passed
+
       setSentPopup(true);
-      fields.forEach((field) => field.setValue(""));
+      console.log(data);
+    } catch (err) {
+      const validationErrors = {};
+
+      if (err instanceof yup.ValidationError) {
+        err.inner.forEach((error) => {
+          validationErrors[error.path] = error.message;
+        });
+
+        formRef.current.setErrors(validationErrors);
+      }
     }
-  }
+  };
 
   return (
     <section id="contact-us">
@@ -87,38 +69,17 @@ const Contacts = () => {
           </div>
         </div>
 
-        <form id="contact-form" onSubmit={handleSubmit}>
-          <ul>
-            <li>
-              <Input id="name" state={name} placeholder="Seu nome" />
-              <Input
-                type={"email"}
-                id="email"
-                state={email}
-                placeholder="Seu Email"
-              />
-            </li>
-            <li>
-              <Input
-                id="subject"
-                state={subject}
-                placeholder="Assunto do Email"
-              />
-            </li>
-            <li>
-              <Textarea
-                id="message"
-                state={message}
-                placeholder="Sua mensagem"
-              />
-            </li>
-            <li>
-              <Button id="fmButton" type="submit">
-                Enviar
-              </Button>
-            </li>
-          </ul>
-        </form>
+        <Form id="contact-form" ref={formRef} onSubmit={handleFormSubmit}>
+          <FlexWrapper version="4">
+            <Input id="name" name="name" placeholder="Seu nome" />
+            <Input id="email" name="email" placeholder="Seu Email" />
+          </FlexWrapper>
+          <Input id="subject" name="subject" placeholder="Assunto do Email" />
+          <Textarea id="message" name="message" placeholder="Sua mensagem" />
+          <Button id="fmButton" type="submit">
+            Enviar
+          </Button>
+        </Form>
 
         <SentPopup className={"sent-popup"}>
           <h2>Sucesso!!!</h2>

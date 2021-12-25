@@ -1,6 +1,6 @@
 import React from "react";
 import useApp from "context/GlobalContext";
-import scrollToTitle from "helper/scrollToTitle";
+import scrollToTitle from "utils/scrollToTitle";
 
 const navLinks = [
   { innerText: "Home", idTitle: "root" },

@@ -1,6 +1,6 @@
 import React from "react";
 import Title from "components/common/Title";
-import scrollToTitle from "helper/scrollToTitle";
+import scrollToTitle from "utils/scrollToTitle";
 import Button from "components/common/Buttons/Button";
 
 const Hero = () => (
