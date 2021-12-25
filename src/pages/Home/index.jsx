@@ -1,17 +1,18 @@
 import React from "react";
-import Topbar from "components/Topbar";
-import Hero from "components/Hero";
-import About from "components/About";
-import Services from "components/Services";
-import Clients from "components/Clients";
-import Portfolio from "components/Portfolio";
-import Testimonials from "components/Testimonials";
-import Cta from "components/Cta";
-import OurTeam from "components/OurTeam";
-import Contacts from "components/Contacts";
-import MainFooter from "components/MainFooter";
-import Sidebar from "components/Sidebar";
-import MainHeader from "components/Headers/MainHeader";
+import Hero from "components/Home/Hero";
+import About from "components/Home/About";
+import Services from "components/Home/Services";
+import Clients from "components/Home/Clients";
+import Portfolio from "components/Home/Portfolio";
+import Testimonials from "components/Home/Testimonials";
+import Cta from "components/Home/Cta";
+import OurTeam from "components/Home/OurTeam";
+import Contacts from "components/Home/Contacts";
+
+import Topbar from "components/common/Topbar";
+import MainFooter from "components/common/MainFooter";
+import Sidebar from "components/common/Sidebar";
+import MainHeader from "components/common/Headers/MainHeader";
 
 const Home = () => {
   return (

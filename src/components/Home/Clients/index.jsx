@@ -10,7 +10,7 @@ import client5 from "assets/images/client-logo-05.svg";
 import client6 from "assets/images/client-logo-06.svg";
 import client7 from "assets/images/client-logo-07.svg";
 import client8 from "assets/images/client-logo-08.svg";
-import Title from "components/Title";
+import Title from "components/common/Title";
 
 const clients = [
   {

@@ -1,5 +1,5 @@
 import React from "react";
-import SocialLinks from "components/SocialLinks";
+import SocialLinks from "components/common/SocialLinks";
 
 const Topbar = () => {
   return (

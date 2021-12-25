@@ -1,6 +1,6 @@
 import React from "react";
 import AboutImg from "assets/images/aboult-image.jpg";
-import Title from "components/Title";
+import Title from "components/common/Title";
 
 /* === ABOUT === */
 const aboutTopics = [
