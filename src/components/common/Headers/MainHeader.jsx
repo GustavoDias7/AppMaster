@@ -1,10 +1,8 @@
 import React from "react";
-import useApp from "context/GlobalContext";
 import NavLinks from "components/common/NavLinks";
+import Burger from "components/common/Buttons/Burger";
 
 const MainHeader = () => {
-  const { setSidebar } = useApp();
-
   return (
     <header id="main-header">
       <div className="container">
@@ -13,13 +11,7 @@ const MainHeader = () => {
             <h1>AppMaster</h1>
           </a>
           <NavLinks />
-          <button
-            className="hamburger"
-            onClick={() => setSidebar(true)}
-            aria-label="Menu lateral"
-          >
-            <i className="fas fa-bars"></i>
-          </button>
+          <Burger />
         </div>
       </div>
     </header>

@@ -35,28 +35,6 @@ p {
   transition: 0.2s ease-out;
 }
 
-/* buttons */
-
-.hamburger {
-  display: none;
-  font-size: 24px;
-  width: 24px;
-  height: 24px;
-  border: none;
-  outline: none;
-  background-color: unset;
-}
-
-.hamburger i {
-  color: #7b2cbf;
-  transition: 0.2s;
-}
-
-.hamburger:focus i,
-.hamburger:hover i {
-  color: #b361f7;
-}
-
 /* sizes and spaces of the page */
 
 .container {
@@ -651,10 +629,6 @@ p {
 
   #main-header .navbar {
     display: none;
-  }
-
-  .hamburger {
-    display: block;
   }
 
   #about-content {

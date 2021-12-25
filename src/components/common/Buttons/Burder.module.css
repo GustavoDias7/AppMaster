@@ -1,0 +1,23 @@
+.burger {
+  display: none;
+  font-size: 24px;
+  width: 24px;
+  height: 24px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: unset;
+}
+.burger i {
+  color: #7b2cbf;
+  transition: 0.2s;
+}
+.burger:focus i,
+.burger:hover i {
+  opacity: 0.6;
+}
+@media (max-width: 991px) {
+  .burger {
+    display: block;
+  }
+}
