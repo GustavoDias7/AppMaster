@@ -17,13 +17,13 @@ const Sidebar = () => {
       className={`sidebar${sidebar ? " active" : ""}`}
       onClick={clickOutside}
     >
-      <nav className="content">
+      <div className="content">
         <button className="close" onClick={() => setSidebar(false)}>
           X
         </button>
         <NavLinks isSidebar={true} />
         <SocialLinks />
-      </nav>
+      </div>
     </div>
   );
 };

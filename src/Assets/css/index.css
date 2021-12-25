@@ -215,15 +215,15 @@ button {
   color: #b361f7;
 }
 
-.navbar ul {
+#main-header .navbar ul {
   display: flex;
 }
 
-.navbar ul li {
+#main-header .navbar ul li {
   margin-left: 20px;
 }
 
-.navbar .social-links {
+#main-header .navbar .social-links {
   display: none;
 }
 
@@ -909,7 +909,7 @@ button {
     max-width: 720px;
   }
 
-  .navbar {
+  #main-header .navbar {
     display: none;
   }
 
