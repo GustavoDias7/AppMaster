@@ -1,5 +1,5 @@
 import React from "react";
-import useApp from "../../context/GlobalContext";
+import useApp from "context/GlobalContext";
 
 const navLinks = [
   { innerText: "Home", idTitle: "root", isDefaultPrevented: true },

@@ -1,6 +1,6 @@
 import React from "react";
-import useApp from "../../context/GlobalContext";
-import NavLinks from "../NavLinks";
+import useApp from "context/GlobalContext";
+import NavLinks from "components/NavLinks";
 
 const MainHeader = () => {
   const { setSidebar } = useApp();

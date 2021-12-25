@@ -1,7 +1,7 @@
 import React from "react";
-import useApp from "../../context/GlobalContext";
-import useForm from "../../hooks/useForm";
-import Title from "../Title";
+import useApp from "context/GlobalContext";
+import useForm from "hooks/useForm";
+import Title from "components/Title";
 
 const Input = ({ type = "text", id, placeholder, state }) => {
   const { value, handleChange, handleBlur, error } = state;
