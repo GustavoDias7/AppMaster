@@ -1,7 +1,7 @@
 import React from "react";
-import useApp from "../context/GlobalContext";
-import NavLinks from "./NavLinks";
-import SocialLinks from "./SocialLinks";
+import useApp from "../../context/GlobalContext";
+import NavLinks from "../NavLinks";
+import SocialLinks from "../SocialLinks";
 
 const Sidebar = () => {
   const { sidebar, setSidebar } = useApp();

@@ -2,15 +2,15 @@ import React from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-import client1 from "../assets/images/client-logo-01.svg";
-import client2 from "../assets/images/client-logo-02.svg";
-import client3 from "../assets/images/client-logo-03.svg";
-import client4 from "../assets/images/client-logo-04.svg";
-import client5 from "../assets/images/client-logo-05.svg";
-import client6 from "../assets/images/client-logo-06.svg";
-import client7 from "../assets/images/client-logo-07.svg";
-import client8 from "../assets/images/client-logo-08.svg";
-import Title from "./Title";
+import client1 from "../../assets/images/client-logo-01.svg";
+import client2 from "../../assets/images/client-logo-02.svg";
+import client3 from "../../assets/images/client-logo-03.svg";
+import client4 from "../../assets/images/client-logo-04.svg";
+import client5 from "../../assets/images/client-logo-05.svg";
+import client6 from "../../assets/images/client-logo-06.svg";
+import client7 from "../../assets/images/client-logo-07.svg";
+import client8 from "../../assets/images/client-logo-08.svg";
+import Title from "../Title";
 
 const clients = [
   {

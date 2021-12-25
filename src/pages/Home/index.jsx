@@ -1,6 +1,5 @@
 import React from "react";
 import Topbar from "../../components/Topbar";
-import MainHeader from "../../components/MainHeader";
 import Hero from "../../components/Hero";
 import About from "../../components/About";
 import Services from "../../components/Services";
@@ -12,6 +11,7 @@ import OurTeam from "../../components/OurTeam";
 import Contacts from "../../components/Contacts";
 import MainFooter from "../../components/MainFooter";
 import Sidebar from "../../components/Sidebar";
+import MainHeader from "../../components/Headers/MainHeader";
 
 const Home = () => {
   return (

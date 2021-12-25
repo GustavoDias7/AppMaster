@@ -1,6 +1,6 @@
 import React from "react";
-import AboutImg from "../assets/images/aboult-image.jpg";
-import Title from "./Title";
+import AboutImg from "../../assets/images/aboult-image.jpg";
+import Title from "../Title";
 
 /* === ABOUT === */
 const aboutTopics = [

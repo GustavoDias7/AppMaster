@@ -1,8 +1,8 @@
 import React from "react";
-import product7 from "../assets/images/product-07.jpg";
-import product8 from "../assets/images/product-08.jpg";
-import product9 from "../assets/images/product-09.jpg";
-import Title from "./Title";
+import product7 from "../../assets/images/product-07.jpg";
+import product8 from "../../assets/images/product-08.jpg";
+import product9 from "../../assets/images/product-09.jpg";
+import Title from "../Title";
 
 const Context = React.createContext();
 const PortContext = ({ children }) => {
