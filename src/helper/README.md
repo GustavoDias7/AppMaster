@@ -3,8 +3,8 @@
 <pre>
   <a
     href="/"
-    onClick={(event) => {
-      scrollToTitle(event, titleIdName, isDefaultPrevented);
+    onClick={(clickEvent) => {
+      scrollToTitle(clickEvent, titleIdName);
     }}
   > 
     innerText

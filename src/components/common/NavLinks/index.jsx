@@ -3,13 +3,13 @@ import useApp from "context/GlobalContext";
 import scrollToTitle from "helper/scrollToTitle";
 
 const navLinks = [
-  { innerText: "Home", idTitle: "root", isDefaultPrevented: true },
-  { innerText: "Sobre", idTitle: "about", isDefaultPrevented: true },
-  { innerText: "Serviços", idTitle: "services", isDefaultPrevented: true },
-  { innerText: "Clientes", idTitle: "clients", isDefaultPrevented: true },
-  { innerText: "Portfólio", idTitle: "portfolio", isDefaultPrevented: true },
-  { innerText: "Time", idTitle: "our-team", isDefaultPrevented: true },
-  { innerText: "Contatos", idTitle: "contact-us", isDefaultPrevented: true },
+  { innerText: "Home", idTitle: "root" },
+  { innerText: "Sobre", idTitle: "about" },
+  { innerText: "Serviços", idTitle: "services" },
+  { innerText: "Clientes", idTitle: "clients" },
+  { innerText: "Portfólio", idTitle: "portfolio" },
+  { innerText: "Time", idTitle: "our-team" },
+  { innerText: "Contatos", idTitle: "contact-us" },
 ];
 
 const NavLinks = ({ isSidebar = false }) => {
@@ -23,7 +23,7 @@ const NavLinks = ({ isSidebar = false }) => {
             <li key={link.idTitle + "-sidebar"}>
               <a
                 onClick={(event) => {
-                  scrollToTitle(event, link.idTitle, link.isDefaultPrevented);
+                  scrollToTitle(event, link.idTitle);
                   if (isSidebar) setSidebar(false);
                 }}
                 href="/"
