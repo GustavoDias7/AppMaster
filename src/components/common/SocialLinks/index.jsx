@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import styles from "./SocialLinks.module.css";
 
 const socialLinks = [
@@ -29,9 +29,8 @@ const SocialLinks = (props) => {
     <div className={styles.socialLinks}>
       {socialLinks.map(({ name, href, icon }) => {
         return (
-          <>
+          <Fragment key={name + "-social-links"}>
             <a
-              key={name + "-social-links"}
               href={props[name] || href}
               target="_blank"
               rel="noreferrer"
@@ -43,7 +42,7 @@ const SocialLinks = (props) => {
               className={styles.line}
               style={{ backgroundColor: props.color }}
             />
-          </>
+          </Fragment>
         );
       })}
     </div>

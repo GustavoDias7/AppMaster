@@ -2,6 +2,7 @@ import React from "react";
 import useApp from "context/GlobalContext";
 import useForm from "hooks/useForm";
 import Title from "components/common/Title";
+import Button from "components/common/Buttons/Button";
 
 const Input = ({ type = "text", id, placeholder, state }) => {
   const { value, handleChange, handleBlur, error } = state;
@@ -112,9 +113,9 @@ const Contacts = () => {
               />
             </li>
             <li>
-              <button className="main-button" type="submit">
+              <Button id="fmButton" type="submit">
                 Enviar
-              </button>
+              </Button>
             </li>
           </ul>
         </form>

@@ -49,31 +49,6 @@ p {
 
 /* buttons */
 
-button {
-  text-align: center;
-  cursor: pointer;
-  border: none;
-  transition: 0.2s ease-out;
-}
-
-.main-button {
-  display: inline-block;
-  color: #fff;
-  text-align: center;
-  min-width: 140px;
-  padding: 10px 0;
-  border-radius: 4px;
-  background-color: #7b2cbf;
-  transition: 0.2s ease-out;
-  cursor: pointer;
-  outline: none;
-}
-
-.cta-button {
-  margin-left: 32px;
-  border: 2px solid #fff;
-}
-
 .hamburger {
   display: none;
   font-size: 24px;
@@ -228,8 +203,8 @@ button {
   margin-bottom: 40px;
 }
 
-#hero-content .main-button {
-  margin: 0 5px;
+#hero-content button:first-child {
+  margin-right: 10px;
 }
 
 /* === ABOUT === */
@@ -408,6 +383,7 @@ button {
   font-size: 20px;
   cursor: pointer;
   margin: 5px;
+  border: none;
   background-color: unset;
 }
 
@@ -630,6 +606,8 @@ button {
 }
 
 .contact-card i {
+  color: #7b2cbf;
+  font-size: 2.5rem;
   margin-bottom: 10px;
 }
 
@@ -684,10 +662,6 @@ button {
 #contact-form ul li textarea {
   resize: vertical;
   height: 120px;
-}
-
-#contact-form .main-button {
-  width: 100%;
 }
 
 /* === MAIN-FOOTER === */
@@ -986,9 +960,6 @@ button {
   #hero-content h2 {
     font-size: 28px;
     margin-bottom: 30px;
-  }
-  #hero-content .main-button {
-    min-width: 120px;
   }
 
   .services-card {
