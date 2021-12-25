@@ -1,5 +1,6 @@
 import React from "react";
 import Title from "components/common/Title";
+import scrollToTitle from "helper/scrollToTitle";
 
 const Hero = () => (
   <section id="hero">
@@ -7,10 +8,19 @@ const Hero = () => (
       <div id="hero-content">
         <Title>Transforme sua ideia em um app!</Title>
         <div className="hero-buttons">
-          <a href="#about" className="main-button">
+          <a
+            href="/"
+            className="main-button"
+            onClick={(event) => scrollToTitle(event, "about")}
+          >
             Sobre nós
           </a>
-          <a href="#portfolio" className="main-button">
+
+          <a
+            href="/"
+            className="main-button"
+            onClick={(event) => scrollToTitle(event, "portfolio")}
+          >
             Projetos
           </a>
         </div>

@@ -1,5 +1,6 @@
 import React from "react";
 import useApp from "context/GlobalContext";
+import scrollToTitle from "helper/scrollToTitle";
 
 const navLinks = [
   { innerText: "Home", idTitle: "root", isDefaultPrevented: true },
@@ -10,13 +11,6 @@ const navLinks = [
   { innerText: "Time", idTitle: "our-team", isDefaultPrevented: true },
   { innerText: "Contatos", idTitle: "contact-us", isDefaultPrevented: true },
 ];
-
-const scrollToTitle = (event, idTitle, isDefaultPrevented) => {
-  if (isDefaultPrevented) event.preventDefault();
-  const title = document.getElementById(idTitle);
-  const headerHeight = document.getElementById("main-header").clientHeight + 8;
-  window.scrollTo(0, title.offsetTop - headerHeight);
-};
 
 const NavLinks = ({ isSidebar = false }) => {
   const { setSidebar } = useApp();
