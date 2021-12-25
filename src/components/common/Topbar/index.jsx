@@ -16,7 +16,7 @@ const Topbar = () => {
               <p>+55 (21)4002-8922</p>
             </a>
           </div>
-          <SocialLinks />
+          <SocialLinks color="#444" />
         </div>
       </div>
     </section>

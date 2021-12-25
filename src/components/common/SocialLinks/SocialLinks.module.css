@@ -1,0 +1,18 @@
+.socialLinks {
+  display: flex;
+  justify-content: center;
+}
+.socialLinks a {
+  padding: 0px 12px;
+  font-size: 20px;
+}
+.socialLinks a:hover,
+.socialLinks a:focus {
+  opacity: 0.6;
+}
+.line {
+  width: 1px;
+}
+.line:last-of-type {
+  display: none;
+}

@@ -32,7 +32,7 @@ const ServicesCard = ({ myContent }) => {
   const { icon, title, content } = myContent;
   return (
     <div className="services-card">
-      <i className={icon + " md-icon"}></i>
+      <i className={icon}></i>
       <div className="services-card-content">
         <h3>{title}</h3>
         <p>{content}</p>

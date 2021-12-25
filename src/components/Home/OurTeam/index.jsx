@@ -4,6 +4,7 @@ import Avatar02 from "assets/images/avatar-04.jpg";
 import Avatar03 from "assets/images/avatar-06.jpg";
 import Avatar04 from "assets/images/avatar-07.jpg";
 import Title from "components/common/Title";
+import SocialLinks from "components/common/SocialLinks";
 
 /* === OUR-TEAM === */
 const teamInfos = [
@@ -70,40 +71,7 @@ const TeamCard = ({ team }) => {
       <div className="team-descripttion">
         <h3>{name}</h3>
         <p>{type}</p>
-        <div className="social-links">
-          <a
-            href={links.twitter}
-            target="_blank"
-            rel="noreferrer"
-            aria-label="Link do nosso twitter"
-          >
-            <i className="fab fa-twitter sm-icon"></i>
-          </a>
-          <a
-            href={links.facebook}
-            target="_blank"
-            rel="noreferrer"
-            aria-label="Link do nosso facebook"
-          >
-            <i className="fab fa-facebook sm-icon"></i>
-          </a>
-          <a
-            href={links.instagram}
-            target="_blank"
-            rel="noreferrer"
-            aria-label="Link do nosso instagram"
-          >
-            <i className="fab fa-instagram sm-icon"></i>
-          </a>
-          <a
-            href={links.linkedin}
-            target="_blank"
-            rel="noreferrer"
-            aria-label="Link do nosso linkedin"
-          >
-            <i className="fab fa-linkedin sm-icon"></i>
-          </a>
-        </div>
+        <SocialLinks color="#fff" {...links} />
       </div>
     </figure>
   );

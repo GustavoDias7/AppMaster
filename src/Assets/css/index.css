@@ -34,22 +34,17 @@ li {
 a {
   font-size: 15px;
   font-weight: 600;
-  transition: 0.2s 0.2s ease-out;
+  transition: 0.2s ease-out;
   outline: none;
+}
+a:hover,
+a:focus {
+  opacity: 0.75;
 }
 
 i,
 p {
   transition: 0.2s ease-out;
-}
-
-a:hover p,
-a:active p,
-a:focus p,
-a:hover i,
-a:active i,
-a:focus i {
-  color: #b361f7;
 }
 
 /* buttons */
@@ -74,15 +69,6 @@ button {
   outline: none;
 }
 
-.main-button:active {
-  background-color: #4e1183;
-}
-
-.main-button:focus,
-.main-button:hover {
-  background-color: #b361f7;
-}
-
 .cta-button {
   margin-left: 32px;
   border: 2px solid #fff;
@@ -104,27 +90,8 @@ button {
 }
 
 .hamburger:focus i,
-.hamburger:active i,
 .hamburger:hover i {
   color: #b361f7;
-}
-
-/* active */
-
-.active-translate {
-  transform: translateX(0) !important;
-}
-
-/* icons */
-
-.md-icon {
-  font-size: 50px;
-  color: #7b2cbf;
-}
-
-.sm-icon {
-  font-size: 20px;
-  transition: 0.2s ease-out;
 }
 
 /* sizes and spaces of the page */
@@ -158,7 +125,6 @@ button {
 
 #topbar-content,
 #contact-info-container,
-.social-links,
 .contact-info {
   display: flex;
 }
@@ -170,20 +136,13 @@ button {
 }
 
 .contact-info {
+  display: flex;
+  align-items: center;
   margin-right: 24px;
 }
 
-.contact-info .sm-icon {
-  margin-right: 6px;
-}
-
-.social-links a {
-  display: inline-block;
-  padding: 0 12px;
-}
-
-.social-links a + a {
-  border-left: 1px solid rgba(73, 78, 92, 0.2);
+.contact-info i {
+  margin-right: 8px;
 }
 
 /* === MAIN-HEADER === */
@@ -332,6 +291,8 @@ button {
 
 .services-card i {
   margin-right: 20px;
+  font-size: 40px;
+  color: #7b2cbf;
 }
 
 /* === CLIENT === */
@@ -648,10 +609,6 @@ button {
 
 .team-descripttion .sm-icon {
   color: #fff;
-}
-
-.team-descripttion .sm-icon:hover {
-  color: #b361f7;
 }
 
 /* === CONTACT-US === */
@@ -992,7 +949,7 @@ button {
     margin: 0;
   }
 
-  #topbar-content .social-links {
+  #topbar-content .SocialLinks_socialLinks__eh2Vt {
     display: none;
   }
 
