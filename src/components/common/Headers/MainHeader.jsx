@@ -7,8 +7,8 @@ const MainHeader = () => {
 
   return (
     <header id="main-header">
-      <div className="main-container">
-        <div id="main-header-content">
+      <div className="container">
+        <div className="content">
           <a className="logo" href="/">
             <h1>AppMaster</h1>
           </a>

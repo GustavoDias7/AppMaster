@@ -4,6 +4,7 @@ import Avatar1 from "assets/images/avatar-01.jpg";
 import Avatar2 from "assets/images/avatar-02.jpg";
 import Avatar3 from "assets/images/avatar-03.jpg";
 import Title from "components/common/Title";
+import Subtitle from "components/common/Subtitle";
 
 const testimonialInfo = [
   {
@@ -68,14 +69,13 @@ const TestimonialsCard = ({ testi }) => {
 const Testimonials = () => {
   return (
     <section id="testimonials">
-      <div className="main-container">
-        <div className="section-header">
-          <Title>Depoimentos</Title>
-          <p>
-            Veja a opinião sincera dos nossos clientes a respeito dos serviços
-            prestados.
-          </p>
-        </div>
+      <div className="container">
+        <Title>Depoimentos</Title>
+        <Subtitle>
+          Veja a opinião sincera dos nossos clientes a respeito dos serviços
+          prestados.
+        </Subtitle>
+
         <Slider {...settings} id="testimonials-container">
           {testimonialInfo.map((testi) => (
             <TestimonialsCard testi={testi} key={testi.name} />

@@ -4,11 +4,11 @@ import scrollToTitle from "utils/scrollToTitle";
 import Button from "components/common/Buttons/Button";
 
 const Hero = () => (
-  <section id="hero">
-    <div className="main-container">
-      <div id="hero-content">
+  <main id="hero">
+    <div className="container">
+      <div className="content">
         <Title>Transforme sua ideia em um app!</Title>
-        <div className="hero-buttons">
+        <div>
           <Button onClick={(event) => scrollToTitle(event, "about")}>
             Sobre nós
           </Button>
@@ -18,8 +18,8 @@ const Hero = () => (
         </div>
       </div>
     </div>
-    <div className="white-overlay"></div>
-  </section>
+    <div className="white-overlay" />
+  </main>
 );
 
 export default Hero;

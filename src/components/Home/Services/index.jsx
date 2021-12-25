@@ -1,5 +1,6 @@
 import React from "react";
 import Title from "components/common/Title";
+import FlexWrapper from "components/common/FlexWrapper";
 
 const ServicesContent = [
   {
@@ -32,8 +33,8 @@ const ServicesCard = ({ myContent }) => {
   const { icon, title, content } = myContent;
   return (
     <div className="services-card">
-      <i className={icon}></i>
-      <div className="services-card-content">
+      <i className={icon} />
+      <div>
         <h3>{title}</h3>
         <p>{content}</p>
       </div>
@@ -44,13 +45,14 @@ const ServicesCard = ({ myContent }) => {
 const Services = () => {
   return (
     <section id="services">
-      <div className="main-container">
+      <div className="container">
         <Title>Serviços</Title>
-        <div id="services-card-container">
+
+        <FlexWrapper>
           {ServicesContent.map((myContent) => (
             <ServicesCard myContent={myContent} key={myContent.title} />
           ))}
-        </div>
+        </FlexWrapper>
       </div>
     </section>
   );

@@ -3,6 +3,8 @@ import product7 from "assets/images/product-07.jpg";
 import product8 from "assets/images/product-08.jpg";
 import product9 from "assets/images/product-09.jpg";
 import Title from "components/common/Title";
+import Subtitle from "components/common/Subtitle";
+import FlexWrapper from "components/common/FlexWrapper";
 
 const Context = React.createContext();
 const PortContext = ({ children }) => {
@@ -101,33 +103,20 @@ const Product = ({ content, index }) => {
 
   return (
     <figure className="product">
-      <div className="product-content">
-        <div className="product-image-container">
-          <img
-            className="product-image"
-            src={image}
-            alt={title}
-            onClick={handleClick}
-          />
+      <div className="content">
+        <div className="image-container">
+          <img src={image} alt={title} onClick={handleClick} />
         </div>
-        <div className="product-description">
-          <header className="product-header">
+        <div className="description">
+          <header>
             <h3>{title}</h3>
             <p>{type}</p>
           </header>
-          <div className="product-buttons">
-            <button
-              className="product-image-zoom"
-              onClick={handleClick}
-              aria-label="Ativar zoom da imagem"
-            >
+          <div className="buttons">
+            <button onClick={handleClick} aria-label="Ativar zoom da imagem">
               <i className="fas fa-search-plus zoom-icon"></i>
             </button>
-            <a
-              href="/"
-              className="product-page"
-              aria-label={"Link para o produto " + title}
-            >
+            <a href="/" aria-label={"Link para o produto " + title}>
               <i className="fas fa-link"></i>
             </a>
           </div>
@@ -141,21 +130,20 @@ const Portfolio = () => {
   return (
     <PortContext>
       <section id="portfolio">
-        <div className="main-container">
-          <div className="section-header">
-            <Title>Nosso portfólio</Title>
-            <p>
-              Confira o resultado do nosso trabalho, com alguns exemplos das
-              nossas aplicações mais renomadas do mercado, que trouxeram
-              resultados incríveis, impactando milhares de pessoas.
-            </p>
-          </div>
+        <div className="container">
+          <Title>Nosso portfólio</Title>
+          <Subtitle>
+            Confira o resultado do nosso trabalho, com alguns exemplos das
+            nossas aplicações mais renomadas do mercado, que trouxeram
+            resultados incríveis, impactando milhares de pessoas.
+          </Subtitle>
 
-          <div className="product-container">
+          <FlexWrapper version="2">
             {productContent.map((content, index) => (
               <Product content={content} key={content.title} index={index} />
             ))}
-          </div>
+          </FlexWrapper>
+
           <ImageZoom productContent={productContent} />
         </div>
       </section>

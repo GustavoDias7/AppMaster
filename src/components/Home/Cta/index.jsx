@@ -5,8 +5,9 @@ import Button from "components/common/Buttons/Button";
 const Cta = () => {
   return (
     <section id="cta">
-      <div className="main-container">
+      <div className="container">
         <Title>Fale conosco</Title>
+
         <div className="cta-content">
           <p>
             Temos o prazer de te convidar para um papo descompromissado, no

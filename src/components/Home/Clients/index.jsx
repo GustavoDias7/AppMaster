@@ -11,6 +11,7 @@ import client6 from "assets/images/client-logo-06.svg";
 import client7 from "assets/images/client-logo-07.svg";
 import client8 from "assets/images/client-logo-08.svg";
 import Title from "components/common/Title";
+import Subtitle from "components/common/Subtitle";
 
 const clients = [
   {
@@ -70,30 +71,23 @@ const settings = {
 
 const Clients = () => (
   <section id="clients">
-    <div className="main-container">
-      <div className="section-header">
-        <Title>Clientes</Title>
-        <p>
-          Temos orgulho de fazer parceria com os maiores empresas do mercado.
-          Nós tornamos seus negócios ainda mais promissores com o nosso serviços
-          e estratégia de negócio.
-        </p>
-      </div>
-      <div id="client-carousel-container">
-        <Slider {...settings}>
-          {clients.map((client) => {
-            return (
-              <div key={client.alt} className="logo-container">
-                <img
-                  src={client.src}
-                  alt={client.alt}
-                  className="client-logo"
-                />
-              </div>
-            );
-          })}
-        </Slider>
-      </div>
+    <div className="container">
+      <Title>Clientes</Title>
+      <Subtitle>
+        Temos orgulho de fazer parceria com os maiores empresas do mercado. Nós
+        tornamos seus negócios ainda mais promissores com o nosso serviços e
+        estratégia de negócio.
+      </Subtitle>
+
+      <Slider {...settings}>
+        {clients.map((client) => {
+          return (
+            <div key={client.alt}>
+              <img src={client.src} alt={client.alt} className="client-logo" />
+            </div>
+          );
+        })}
+      </Slider>
     </div>
   </section>
 );

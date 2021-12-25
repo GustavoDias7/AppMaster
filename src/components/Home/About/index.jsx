@@ -1,6 +1,7 @@
 import React from "react";
 import AboutImg from "assets/images/aboult-image.jpg";
 import Title from "components/common/Title";
+import FlexWrapper from "components/common/FlexWrapper";
 
 /* === ABOUT === */
 const aboutTopics = [
@@ -12,8 +13,8 @@ const aboutTopics = [
 const About = () => {
   return (
     <section id="about">
-      <div className="main-container">
-        <div id="about-content">
+      <div className="container">
+        <FlexWrapper>
           <div id="about-image">
             <img src={AboutImg} alt="Sobre" />
           </div>
@@ -35,7 +36,7 @@ const About = () => {
               })}
             </ul>
           </div>
-        </div>
+        </FlexWrapper>
       </div>
     </section>
   );

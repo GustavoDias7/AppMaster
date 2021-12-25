@@ -1,10 +1,10 @@
-import React from "react";
+import React, { createContext, useContext, useState } from "react";
 import useModal from "hooks/useModal";
 
-const GlobalContext = React.createContext();
+const GlobalContext = createContext();
 
 export const GlobalStorage = ({ children }) => {
-  const [sidebar, setSidebar] = React.useState(false);
+  const [sidebar, setSidebar] = useState(false);
   const [SentPopup, setSentPopup] = useModal();
 
   const values = { sidebar, setSidebar, SentPopup, setSentPopup };
@@ -14,7 +14,7 @@ export const GlobalStorage = ({ children }) => {
 };
 
 const useApp = () => {
-  const context = React.useContext(GlobalContext);
+  const context = useContext(GlobalContext);
   return context;
 };
 

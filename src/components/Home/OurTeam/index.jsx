@@ -5,6 +5,7 @@ import Avatar03 from "assets/images/avatar-06.jpg";
 import Avatar04 from "assets/images/avatar-07.jpg";
 import Title from "components/common/Title";
 import SocialLinks from "components/common/SocialLinks";
+import FlexWrapper from "components/common/FlexWrapper";
 
 /* === OUR-TEAM === */
 const teamInfos = [
@@ -80,13 +81,13 @@ const TeamCard = ({ team }) => {
 const OurTeam = () => {
   return (
     <section id="our-team">
-      <div className="main-container">
+      <div className="container">
         <Title>Nosso Time</Title>
-        <div className="team-container">
+        <FlexWrapper version="1">
           {teamInfos.map((team) => (
             <TeamCard team={team} key={team.name} />
           ))}
-        </div>
+        </FlexWrapper>
       </div>
     </section>
   );
