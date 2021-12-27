@@ -1,0 +1,18 @@
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.wrapper > *:nth-child(1) {
+  width: calc(65% - 12px);
+}
+.wrapper > *:nth-child(2) {
+  width: calc(35% - 12px);
+}
+@media (max-width: 768px) {
+  .wrapper {
+    flex-direction: column;
+  }
+  .wrapper > * {
+    width: 100% !important;
+  }
+}

@@ -1,0 +1,19 @@
+.productInfos article {
+  padding: 1.5rem;
+  box-shadow: 0 0 15px rgba(73, 78, 92, 0.15);
+}
+.productInfos h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eee;
+}
+.productInfos li {
+  margin-bottom: 1rem;
+}
+.productInfos h3 {
+  font-size: 1.675rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+}

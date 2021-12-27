@@ -1,0 +1,22 @@
+.productPath {
+  margin-top: 0 !important;
+  background-color: #fafafa;
+}
+.productPath > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+}
+.productPath p {
+  font-weight: 600;
+}
+.productPath span:nth-of-type(1) a,
+.productPath span:nth-of-type(2) {
+  color: #b361f7;
+}
+.productPath em {
+  display: inline-block;
+  font-style: normal;
+  margin: 0 0.5rem;
+}

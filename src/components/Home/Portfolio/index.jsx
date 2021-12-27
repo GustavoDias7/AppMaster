@@ -1,10 +1,10 @@
 import React from "react";
-import product7 from "assets/images/product-07.jpg";
-import product8 from "assets/images/product-08.jpg";
-import product9 from "assets/images/product-09.jpg";
 import Title from "components/common/Title";
 import Subtitle from "components/common/Subtitle";
 import FlexWrapper from "components/common/FlexWrapper";
+import products from "mock/product";
+import { Link } from "react-router-dom";
+import useApp from "context/GlobalContext";
 
 const Context = React.createContext();
 const PortContext = ({ children }) => {
@@ -18,45 +18,19 @@ const PortContext = ({ children }) => {
   );
 };
 
-/* === PORTFOLIO === */
-const productContent = [
-  {
-    title: "Earthquake",
-    type: "Finanças",
-    image: product7,
-  },
-  {
-    title: "Ben Kolde",
-    type: "Notícias",
-    image: product8,
-  },
-  {
-    title: "Easy Weather",
-    type: "Previsão do tempo",
-    image: product9,
-  },
-];
-
-const ImageZoom = ({ productContent }) => {
-  const { zoom, setZoom, indexImage, setIndexImage } =
-    React.useContext(Context);
+const ImageZoom = ({ products }) => {
+  const { zoom, setZoom, indexImage, setIndexImage } = useApp();
 
   function clickOverlay(e) {
-    if (e.target === e.currentTarget) {
-      setZoom(false);
-    }
+    if (e.target === e.currentTarget) setZoom(false);
   }
 
   function nextImage() {
-    setIndexImage(
-      indexImage + 1 === productContent.length ? 0 : indexImage + 1
-    );
+    setIndexImage(indexImage + 1 === products.length ? 0 : indexImage + 1);
   }
 
   function prevImage() {
-    setIndexImage(
-      indexImage - 1 === -1 ? productContent.length - 1 : indexImage - 1
-    );
+    setIndexImage(indexImage - 1 === -1 ? products.length - 1 : indexImage - 1);
   }
 
   return (
@@ -70,7 +44,7 @@ const ImageZoom = ({ productContent }) => {
         </button>
         <img
           className="zoom-image"
-          src={productContent[indexImage].image}
+          src={products[indexImage].images[0]}
           alt="Zoom"
         />
         <button
@@ -92,9 +66,8 @@ const ImageZoom = ({ productContent }) => {
   );
 };
 
-const Product = ({ content, index }) => {
-  const { setZoom, setIndexImage } = React.useContext(Context);
-  const { image, title, type } = content;
+const Product = ({ images, title, type, link, index }) => {
+  const { setZoom, setIndexImage } = useApp();
 
   function handleClick() {
     setZoom(true);
@@ -105,7 +78,7 @@ const Product = ({ content, index }) => {
     <figure className="product">
       <div className="content">
         <div className="image-container">
-          <img src={image} alt={title} onClick={handleClick} />
+          <img src={images[0]} alt={title} onClick={handleClick} />
         </div>
         <div className="description">
           <header>
@@ -116,9 +89,9 @@ const Product = ({ content, index }) => {
             <button onClick={handleClick} aria-label="Ativar zoom da imagem">
               <i className="fas fa-search-plus zoom-icon"></i>
             </button>
-            <a href="/" aria-label={"Link para o produto " + title}>
+            <Link to={link} aria-label={"Link para o produto " + title}>
               <i className="fas fa-link"></i>
-            </a>
+            </Link>
           </div>
         </div>
       </div>
@@ -139,12 +112,12 @@ const Portfolio = () => {
           </Subtitle>
 
           <FlexWrapper version="2">
-            {productContent.map((content, index) => (
-              <Product content={content} key={content.title} index={index} />
+            {products.map((product, index) => (
+              <Product {...product} key={product.title} index={index} />
             ))}
           </FlexWrapper>
 
-          <ImageZoom productContent={productContent} />
+          <ImageZoom products={products} />
         </div>
       </section>
     </PortContext>
