@@ -1,13 +1,12 @@
 import React, { createContext, useContext, useState } from "react";
-import useModal from "hooks/useModal";
 
 const GlobalContext = createContext();
 
 export const GlobalStorage = ({ children }) => {
   const [sidebar, setSidebar] = useState(false);
-  const [SentPopup, setSentPopup] = useModal();
+  const [sentPopup, setSentPopup] = useState(false);
 
-  const values = { sidebar, setSidebar, SentPopup, setSentPopup };
+  const values = { sidebar, setSidebar, sentPopup, setSentPopup };
   return (
     <GlobalContext.Provider value={values}>{children}</GlobalContext.Provider>
   );

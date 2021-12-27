@@ -1,0 +1,74 @@
+/* === MODAL === */
+
+/* general styles */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9;
+  opacity: 0;
+  transition: 0.2s;
+  pointer-events: none;
+  background-color: rgba(15, 0, 29, 0.9);
+}
+.modal article {
+  position: relative;
+  margin: 20px;
+  width: 100%;
+  max-width: 400px;
+  height: min-content;
+  border-radius: 15px;
+  padding: 60px 40px;
+  background-color: #ddd;
+}
+.modal.active {
+  opacity: 1;
+  pointer-events: all;
+}
+.modal.active article {
+  animation: popup 0.4s;
+}
+@keyframes popup {
+  0% {
+    transform: scale(0.8);
+  }
+  60% {
+    transform: scale(1.2);
+  }
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 30px;
+  height: 30px;
+  border-radius: 30px;
+  border: none;
+  color: #555;
+  background-color: #ddd;
+  cursor: pointer;
+}
+
+/* === CUSTOM MODALS === */
+
+/* sent-popup */
+.sentPopup {
+  text-align: center;
+}
+.sentPopup article {
+  background-color: #b361f7;
+}
+.sentPopup h2 {
+  color: #ddd;
+  margin-bottom: 16px;
+}
+.sentPopup p {
+  color: #ddd;
+}

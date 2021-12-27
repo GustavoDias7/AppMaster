@@ -11,10 +11,10 @@ import { contactSchema } from "utils/schemas";
 import Subtitle from "components/common/Subtitle";
 
 const Contacts = () => {
-  const { SentPopup, setSentPopup } = useApp();
+  const { setSentPopup } = useApp();
   const formRef = useRef(null);
 
-  const handleFormSubmit = async (data) => {
+  const handleFormSubmit = async (data, { reset }) => {
     try {
       // Remove all previous errors
       formRef.current.setErrors({});
@@ -28,6 +28,7 @@ const Contacts = () => {
       // Validation passed
 
       setSentPopup(true);
+      reset();
       console.log(data);
     } catch (err) {
       const validationErrors = {};
@@ -70,7 +71,7 @@ const Contacts = () => {
         </FlexWrapper>
 
         <Form id="contact-form" ref={formRef} onSubmit={handleFormSubmit}>
-          <FlexWrapper version="4">
+          <FlexWrapper>
             <Input id="name" name="name" placeholder="Seu nome" />
             <Input id="email" name="email" placeholder="Seu Email" />
           </FlexWrapper>
@@ -80,14 +81,6 @@ const Contacts = () => {
             Enviar
           </Button>
         </Form>
-
-        <SentPopup className={"sent-popup"}>
-          <h2>Sucesso!!!</h2>
-          <p>
-            Seu e-mail foi enviado. Nossa equipe entrará em contato o mais
-            rápido possível.
-          </p>
-        </SentPopup>
       </div>
     </section>
   );

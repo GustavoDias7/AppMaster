@@ -13,6 +13,7 @@ import Topbar from "components/common/Topbar";
 import MainFooter from "components/common/MainFooter";
 import Sidebar from "components/common/Sidebar";
 import MainHeader from "components/common/Headers/MainHeader";
+import SentPopup from "components/common/Modals/SentPopup";
 
 const Home = () => {
   return (
@@ -30,6 +31,7 @@ const Home = () => {
       <Contacts />
       <MainFooter />
       <Sidebar />
+      <SentPopup />
     </>
   );
 };
