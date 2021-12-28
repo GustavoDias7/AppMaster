@@ -74,16 +74,6 @@ p {
   margin: auto;
 }
 
-/* === CLIENT === */
-
-.client-logo {
-  min-width: 80%;
-  width: 80%;
-  margin: auto;
-  opacity: 0.6;
-  transition: 0.3s ease-out;
-}
-
 /* === PORTIFOLIO === */
 .product {
   width: 300px;

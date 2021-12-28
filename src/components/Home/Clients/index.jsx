@@ -12,6 +12,7 @@ import client7 from "assets/images/client-logo-07.svg";
 import client8 from "assets/images/client-logo-08.svg";
 import Title from "components/common/Title";
 import Subtitle from "components/common/Subtitle";
+import styles from "./Clients.module.css";
 
 const clients = [
   {
@@ -70,7 +71,7 @@ const settings = {
 };
 
 const Clients = () => (
-  <section id="clients">
+  <section>
     <div className="container">
       <Title>Clientes</Title>
       <Subtitle>
@@ -83,7 +84,11 @@ const Clients = () => (
         {clients.map((client) => {
           return (
             <div key={client.alt}>
-              <img src={client.src} alt={client.alt} className="client-logo" />
+              <img
+                src={client.src}
+                alt={client.alt}
+                className={styles.clientLogo}
+              />
             </div>
           );
         })}
