@@ -74,32 +74,6 @@ p {
   margin: auto;
 }
 
-/* === TOPBAR === */
-
-#topbar {
-  margin-top: 0px !important;
-  border-bottom: 1px solid rgba(73, 78, 92, 0.2);
-}
-#topbar .container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.contact-info {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 40px;
-}
-.contact-info a {
-  display: flex;
-  align-items: center;
-  margin-right: 24px;
-}
-.contact-info a i {
-  margin-right: 8px;
-}
-
 /* === MAIN-HEADER === */
 
 #main-header {
@@ -625,19 +599,6 @@ p {
   #root > main,
   #root > footer {
     margin-top: 40px;
-  }
-
-  /* TOPBAR */
-  .contact-info {
-    justify-content: space-between;
-    width: 100%;
-  }
-  .contact-info a {
-    font-size: 0.75rem;
-    margin: 0;
-  }
-  #topbar .SocialLinks_socialLinks__eh2Vt {
-    display: none;
   }
 
   /* MAIN-HEADER */
