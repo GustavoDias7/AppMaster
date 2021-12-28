@@ -74,25 +74,6 @@ p {
   margin: auto;
 }
 
-/* === ABOUT === */
-#about-image img {
-  width: 100%;
-}
-#about-text-header p {
-  font-style: italic;
-  font-weight: 300;
-  font-size: 20px;
-  margin-bottom: 24px;
-}
-#about-list-header li {
-  display: flex;
-  margin-bottom: 16px;
-}
-#about-list-header .sm-icon {
-  color: #7b2cbf;
-  margin-right: 10px;
-}
-
 /* === SERVICES === */
 .services-card {
   display: flex;
@@ -412,18 +393,9 @@ p {
   }
 }
 
-@media (max-width: 991px) {
+@media (max-width: 992px) {
   .container {
     max-width: 720px;
-  }
-
-  #about-content {
-    display: block;
-  }
-
-  #about-image,
-  #about-text {
-    width: 100%;
   }
 
   .product {

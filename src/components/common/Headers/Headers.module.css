@@ -27,9 +27,6 @@
 #mainHeader ul li {
   margin-left: 20px;
 }
-#mainHeader .social-links {
-  display: none;
-}
 #mainHeader a:focus,
 #mainHeader a:active,
 #mainHeader a:hover {
@@ -41,7 +38,7 @@
   }
 }
 @media (max-width: 768px) {
-  #main-header h1 {
+  .logo h1 {
     font-size: 1.625rem;
   }
 }

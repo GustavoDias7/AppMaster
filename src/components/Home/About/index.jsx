@@ -2,6 +2,7 @@ import React from "react";
 import AboutImg from "assets/images/aboult-image.jpg";
 import Title from "components/common/Title";
 import FlexWrapper from "components/common/FlexWrapper";
+import styles from "./About.module.css";
 
 /* === ABOUT === */
 const aboutTopics = [
@@ -12,24 +13,24 @@ const aboutTopics = [
 
 const About = () => {
   return (
-    <section id="about">
+    <section>
       <div className="container">
         <FlexWrapper>
-          <div id="about-image">
+          <div className={styles.left}>
             <img src={AboutImg} alt="Sobre" />
           </div>
-          <div id="about-text">
-            <div id="about-text-header">
+          <div className={styles.right}>
+            <header>
               <Title>Conheça um pouco mais sobre a AppMaster</Title>
               <p>
                 Somos uma startup fabricante de aplicativos para android e IOS.
               </p>
-            </div>
-            <ul id="about-list-header">
+            </header>
+            <ul>
               {aboutTopics.map((topic, index) => {
                 return (
                   <li key={index}>
-                    <i className="far fa-check-circle sm-icon"></i>
+                    <i className="far fa-check-circle" />
                     <p>{topic}</p>
                   </li>
                 );

@@ -1,0 +1,27 @@
+.left img {
+  width: 100%;
+}
+.right header p {
+  font-style: italic;
+  font-weight: 300;
+  font-size: 20px;
+  margin-bottom: 24px;
+}
+.right h2 {
+  text-align: left;
+}
+.right ul li {
+  display: flex;
+  margin-bottom: 16px;
+}
+.right ul li i {
+  color: #7b2cbf;
+  margin-top: 2px;
+  margin-right: 10px;
+}
+@media (max-width: 992px) {
+  .left,
+  .right {
+    width: 100%;
+  }
+}
