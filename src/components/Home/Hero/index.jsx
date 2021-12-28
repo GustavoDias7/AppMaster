@@ -2,11 +2,12 @@ import React from "react";
 import Title from "components/common/Title";
 import scrollToTitle from "utils/scrollToTitle";
 import Button from "components/common/Buttons/Button";
+import styles from "./Hero.module.css";
 
 const Hero = () => (
-  <main id="hero">
+  <main id={styles.hero}>
     <div className="container">
-      <div className="content">
+      <div className={styles.content}>
         <Title>Transforme sua ideia em um app!</Title>
         <div>
           <Button onClick={(event) => scrollToTitle(event, "about")}>
@@ -18,7 +19,7 @@ const Hero = () => (
         </div>
       </div>
     </div>
-    <div className="white-overlay" />
+    <div className={styles.whiteOverlay} />
   </main>
 );
 
