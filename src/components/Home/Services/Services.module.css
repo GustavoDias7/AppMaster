@@ -1,0 +1,24 @@
+.card {
+  display: flex;
+  padding: 40px;
+  box-shadow: 10px 10px 15px rgba(73, 78, 92, 0.25);
+  transition: 0.5s;
+}
+.card:hover {
+  transform: translateY(-10px);
+}
+.card i {
+  margin-right: 20px;
+  font-size: 40px;
+  color: #7b2cbf;
+}
+@media (max-width: 480px) {
+  .card {
+    flex-direction: column;
+    text-align: center;
+  }
+  .card i {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+}

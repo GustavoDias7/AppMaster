@@ -1,6 +1,7 @@
 import React from "react";
 import Title from "components/common/Title";
 import FlexWrapper from "components/common/FlexWrapper";
+import styles from "./Services.module.css";
 
 const ServicesContent = [
   {
@@ -32,7 +33,7 @@ const ServicesContent = [
 const ServicesCard = ({ myContent }) => {
   const { icon, title, content } = myContent;
   return (
-    <div className="services-card">
+    <div className={styles.card}>
       <i className={icon} />
       <div>
         <h3>{title}</h3>
@@ -44,7 +45,7 @@ const ServicesCard = ({ myContent }) => {
 
 const Services = () => {
   return (
-    <section id="services">
+    <section>
       <div className="container">
         <Title>Serviços</Title>
 
