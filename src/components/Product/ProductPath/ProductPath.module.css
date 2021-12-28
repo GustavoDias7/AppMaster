@@ -20,3 +20,18 @@
   font-style: normal;
   margin: 0 0.5rem;
 }
+@media (max-width: 768px) {
+  .productPath > div {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  .productPath h2 {
+    margin-bottom: 0.5rem;
+    font-size: 1.25rem;
+  }
+  .productPath p,
+  .productPath p a {
+    font-size: 0.875rem;
+  }
+}

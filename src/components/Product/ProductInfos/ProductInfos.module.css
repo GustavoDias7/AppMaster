@@ -12,8 +12,20 @@
 .productInfos li {
   margin-bottom: 1rem;
 }
+.productInfos li:last-child {
+  margin-bottom: 0;
+  margin-top: 1.5rem;
+}
+.productInfos li:last-child a {
+  color: #b361f7;
+}
 .productInfos h3 {
   font-size: 1.675rem;
   margin-top: 1.5rem;
   margin-bottom: 1rem;
+}
+@media (max-width: 768px) {
+  .productInfos {
+    margin-top: 2rem;
+  }
 }

@@ -301,9 +301,9 @@ p {
 .product .buttons button,
 .product .buttons a {
   display: inline-block;
-  font-size: 20px;
+  font-size: 24px;
   cursor: pointer;
-  margin: 5px;
+  margin: 0 10px;
   border: none;
   background-color: unset;
 }
@@ -638,6 +638,11 @@ p {
   }
   #topbar .SocialLinks_socialLinks__eh2Vt {
     display: none;
+  }
+
+  /* MAIN-HEADER */
+  #main-header .content .logo h1 {
+    font-size: 1.625rem;
   }
 
   /* HERO */

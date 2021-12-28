@@ -1,6 +1,7 @@
 .wrapper {
   display: flex;
   justify-content: space-between;
+  padding-bottom: 80px;
 }
 .wrapper > *:nth-child(1) {
   width: calc(65% - 12px);
@@ -11,6 +12,7 @@
 @media (max-width: 768px) {
   .wrapper {
     flex-direction: column;
+    padding-bottom: 40px;
   }
   .wrapper > * {
     width: 100% !important;

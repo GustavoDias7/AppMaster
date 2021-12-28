@@ -13,7 +13,9 @@ const ProductInfos = ({
   return (
     <aside className={styles.productInfos}>
       <article>
-        <h2>{title}</h2>
+        <a href={url} target="_blank" rel="noreferrer">
+          <h2>{title}</h2>
+        </a>
         <ul>
           <li>
             <strong>Categoria:</strong> <span>{type}</span>
@@ -25,13 +27,9 @@ const ProductInfos = ({
             <strong>Data:</strong> <span>{date}</span>
           </li>
           <li>
-            <strong>URL:</strong>
-            <span>
-              {" "}
-              <a href={"https://" + url} target="_blank" rel="noreferrer">
-                {url}
-              </a>
-            </span>
+            <a href={url} target="_blank" rel="noreferrer">
+              Baixe o app
+            </a>
           </li>
         </ul>
       </article>
