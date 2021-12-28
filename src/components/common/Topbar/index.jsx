@@ -8,11 +8,11 @@ const Topbar = () => {
       <div className="container">
         <div className={styles.contactInfo}>
           <a href="mailto:appmaster@gmail.com">
-            <i className="far fa-envelope sm-icon" />
+            <i className="far fa-envelope" />
             <p>appmaster@gmail.com</p>
           </a>
           <a href="tel:552140028922">
-            <i className="fas fa-mobile-alt sm-icon" />
+            <i className="fas fa-mobile-alt" />
             <p>+55 (21)4002-8922</p>
           </a>
         </div>

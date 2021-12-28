@@ -74,47 +74,6 @@ p {
   margin: auto;
 }
 
-/* === MAIN-HEADER === */
-
-#main-header {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
-  z-index: 4;
-  background-color: #fff;
-}
-#main-header .content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 80px;
-}
-#main-header .content .logo h1 {
-  color: #7b2cbf;
-  user-select: none;
-  transition: 0.2s ease-in-out;
-}
-#main-header .content .logo:focus h1,
-#main-header .content .logo:active h1,
-#main-header .content .logo:hover h1 {
-  color: #b361f7;
-}
-/* navbar */
-#main-header .navbar ul {
-  display: flex;
-}
-#main-header .navbar ul li {
-  margin-left: 20px;
-}
-#main-header .navbar .social-links {
-  display: none;
-}
-#main-header a:focus,
-#main-header a:active,
-#main-header a:hover {
-  color: #b361f7;
-}
-
 /* === HERO === */
 
 #hero {
@@ -481,77 +440,6 @@ p {
   text-align: center;
 }
 
-/* SIDEBAR */
-.sidebar {
-  position: fixed;
-  top: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 4;
-  transition: 0.4s;
-  background-color: rgba(15, 0, 29, 0.9);
-  opacity: 0;
-  pointer-events: none;
-}
-.sidebar .content {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 50px 30px;
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 250px;
-  height: 100vh;
-  transition: 0.4s;
-  background-color: #7b2cbf;
-  transform: translateX(250px);
-}
-
-/* animation */
-.sidebar.active {
-  opacity: 1;
-  pointer-events: all;
-}
-.sidebar.active .content {
-  transform: translateX(0);
-}
-.sidebar .close {
-  position: absolute;
-  top: 16px;
-  right: 24px;
-  font-size: 20px;
-  font-weight: 600;
-  color: #ddd;
-  border: none;
-  background-color: unset;
-  transition: 0.2s;
-}
-.sidebar .close:hover {
-  color: #fff;
-}
-.sidebar ul li {
-  margin-bottom: 25px;
-  text-align: center;
-}
-.sidebar ul li:last-child {
-  margin-bottom: 0;
-}
-.sidebar a,
-.sidebar i {
-  color: #fff;
-}
-.sidebar a:focus,
-.sidebar a:active,
-.sidebar a:hover {
-  color: #b361f7;
-}
-.sidebar .social-links {
-  width: min-content;
-  margin: auto auto 0;
-}
-
 @media (min-width: 1200px) {
   .container {
     max-width: 1140px;
@@ -564,10 +452,6 @@ p {
 @media (max-width: 991px) {
   .container {
     max-width: 720px;
-  }
-
-  #main-header .navbar {
-    display: none;
   }
 
   #about-content {
@@ -601,11 +485,6 @@ p {
     margin-top: 40px;
   }
 
-  /* MAIN-HEADER */
-  #main-header .content .logo h1 {
-    font-size: 1.625rem;
-  }
-
   /* HERO */
   #hero h2 {
     font-size: 48px;
@@ -635,17 +514,5 @@ p {
   .services-card i {
     margin-right: 0;
     margin-bottom: 10px;
-  }
-}
-@media (max-width: 320px) {
-  #topbar {
-    height: auto;
-    padding: 5px 0;
-  }
-  .contact-info {
-    flex-direction: column;
-  }
-  .contact-info a {
-    margin: 0 auto;
   }
 }

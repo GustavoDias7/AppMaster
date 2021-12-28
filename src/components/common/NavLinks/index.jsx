@@ -16,7 +16,7 @@ const NavLinks = ({ isSidebar = false }) => {
   const { setSidebar } = useApp();
 
   return (
-    <nav className="navbar">
+    <nav>
       <ul>
         {navLinks.map((link) => {
           return (

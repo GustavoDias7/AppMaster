@@ -2,6 +2,7 @@ import React from "react";
 import useApp from "context/GlobalContext";
 import NavLinks from "components/common/NavLinks";
 import SocialLinks from "components/common/SocialLinks";
+import styles from "./Sidebar.module.css";
 
 const Sidebar = () => {
   const { sidebar, setSidebar } = useApp();
@@ -14,11 +15,11 @@ const Sidebar = () => {
 
   return (
     <div
-      className={`sidebar${sidebar ? " active" : ""}`}
+      className={`${styles.sidebar} ${sidebar ? styles.active : ""}`}
       onClick={clickOutside}
     >
-      <div className="content">
-        <button className="close" onClick={() => setSidebar(false)}>
+      <div className={styles.content}>
+        <button className={styles.close} onClick={() => setSidebar(false)}>
           X
         </button>
         <NavLinks isSidebar={true} />
