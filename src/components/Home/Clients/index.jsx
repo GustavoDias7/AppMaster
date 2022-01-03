@@ -71,7 +71,7 @@ const settings = {
 };
 
 const Clients = () => (
-  <section>
+  <section id="clients">
     <div className="container">
       <Title>Clientes</Title>
       <Subtitle>
@@ -80,7 +80,7 @@ const Clients = () => (
         estratégia de negócio.
       </Subtitle>
 
-      <Slider {...settings}>
+      <Slider {...settings} className={styles.sliderClients}>
         {clients.map((client) => {
           return (
             <div key={client.alt}>

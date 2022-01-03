@@ -1,0 +1,81 @@
+.product {
+  margin-bottom: 30px;
+  overflow: hidden;
+}
+.content {
+  position: relative;
+  width: 100%;
+  padding-top: 100%;
+  transition: 0.5s ease-in-out;
+}
+.content:hover {
+  transform: translateY(-10%);
+}
+
+@media (max-width: 768px) {
+  .content {
+    transform: translateY(-10%);
+  }
+}
+
+.imageContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.imageContainer img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  cursor: pointer;
+}
+.description {
+  position: absolute;
+  bottom: -25%;
+  left: 0;
+
+  display: flex;
+  justify-content: space-between;
+
+  width: 100%;
+  height: 25%;
+  padding: 0 20px;
+  background-color: #7b2cbf;
+  transition: 0.5s ease-in-out;
+}
+.content:hover .description {
+  transform: translateY(-60%);
+}
+@media (max-width: 768px) {
+  .content .description {
+    transform: translateY(-60%);
+  }
+}
+.description header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.description h3,
+.description p,
+.description i {
+  color: #fff;
+}
+.description i:focus,
+.description i:hover {
+  color: #b361f7;
+}
+.buttons {
+  align-self: center;
+}
+.buttons button,
+.buttons a {
+  display: inline-block;
+  font-size: 24px;
+  cursor: pointer;
+  margin: 0 10px;
+  border: none;
+  background-color: unset;
+}

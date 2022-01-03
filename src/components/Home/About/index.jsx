@@ -13,7 +13,7 @@ const aboutTopics = [
 
 const About = () => {
   return (
-    <section>
+    <section id="about">
       <div className="container">
         <FlexWrapper>
           <div className={styles.left}>
