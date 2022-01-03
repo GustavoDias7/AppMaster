@@ -1,4 +1,4 @@
-#hero {
+.hero {
   position: relative;
   display: flex;
   justify-content: center;
@@ -25,20 +25,20 @@
   text-align: center;
   z-index: 1;
 }
-#hero h2 {
+.hero h2 {
   font-size: 64px;
   margin-bottom: 40px;
 }
-#hero button:first-child {
+.hero button:first-child {
   margin-right: 10px;
 }
 @media (max-width: 768px) {
-  #hero h2 {
+  .hero h2 {
     font-size: 48px;
   }
 }
 @media (max-width: 480px) {
-  #hero h2 {
+  .hero h2 {
     font-size: 28px;
     margin-bottom: 30px;
   }

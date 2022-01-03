@@ -17,21 +17,20 @@
   pointer-events: none;
   background-color: rgba(15, 0, 29, 0.9);
 }
-.modal article {
+.modal .content {
   position: relative;
   margin: 20px;
   width: 100%;
   max-width: 400px;
   height: min-content;
   border-radius: 15px;
-  padding: 60px 40px;
   background-color: #ddd;
 }
 .modal.active {
   opacity: 1;
   pointer-events: all;
 }
-.modal.active article {
+.modal.active .content {
   animation: popup 0.4s;
 }
 @keyframes popup {
@@ -59,16 +58,54 @@
 /* === CUSTOM MODALS === */
 
 /* sent-popup */
-.sentPopup {
+.sent-popup {
   text-align: center;
 }
-.sentPopup article {
+.sent-popup .content {
+  padding: 60px 40px;
   background-color: #b361f7;
 }
-.sentPopup h2 {
+.sent-popup h2 {
   color: #ddd;
   margin-bottom: 16px;
 }
-.sentPopup p {
+.sent-popup p {
   color: #ddd;
+}
+
+/* === IMAGE-ZOOM === */
+
+.image-zoom .content {
+  position: absolute;
+  margin: 20px;
+  max-width: 100%;
+  background-color: transparent;
+}
+.image-zoom .close {
+  position: fixed;
+}
+.image-zoom .image-container {
+  display: block;
+  position: relative;
+  max-width: 600px;
+  padding-top: 600px;
+  margin: auto;
+}
+.image-zoom .content img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  width: 100%;
+  height: auto;
+}
+@media (max-width: 768px) {
+  .image-zoom .content {
+    padding: 20px;
+  }
+  .image-zoom .image-container {
+    padding-top: 100%;
+  }
 }

@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./Modal.module.css";
+import "./modal.css";
 
 const Modal = ({
   element,
@@ -20,17 +20,15 @@ const Modal = ({
 
   return (
     <div
-      className={`${styles.modal} ${visibility ? styles.active : ""} ${
-        styles[className]
-      }`}
+      className={`modal ${visibility ? "active" : ""} ${className}`}
       onClick={closeOverlay}
     >
-      <article>
-        <button className={styles.close} onClick={closeButton}>
+      <div className="content">
+        <button className="close" onClick={closeButton}>
           X
         </button>
         {children || element}
-      </article>
+      </div>
     </div>
   );
 };

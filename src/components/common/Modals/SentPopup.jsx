@@ -9,7 +9,7 @@ const SentPopup = () => {
     <Modal
       visibility={sentPopup}
       setVisibility={setSentPopup}
-      className="sentPopup"
+      className="sent-popup"
     >
       <h2>Sucesso!!!</h2>
       <p>

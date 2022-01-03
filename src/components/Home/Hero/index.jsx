@@ -5,7 +5,7 @@ import Button from "components/common/Buttons/Button";
 import styles from "./Hero.module.css";
 
 const Hero = () => (
-  <main id={styles.hero}>
+  <main className={styles.hero} id="hero">
     <div className="container">
       <div className={styles.content}>
         <Title>Transforme sua ideia em um app!</Title>
