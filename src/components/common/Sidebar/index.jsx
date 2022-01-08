@@ -8,9 +8,8 @@ const Sidebar = () => {
   const { sidebar, setSidebar } = useApp();
 
   function clickOutside(e) {
-    if (e.target === e.currentTarget) {
-      setSidebar(false);
-    }
+    if (e.target === e.currentTarget) setSidebar(false);
+    else if (e.target.tagName === "A") setSidebar(false);
   }
 
   return (
@@ -22,7 +21,7 @@ const Sidebar = () => {
         <button className={styles.close} onClick={() => setSidebar(false)}>
           X
         </button>
-        <NavLinks isSidebar={true} />
+        <NavLinks />
         <SocialLinks />
       </div>
     </div>
