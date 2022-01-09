@@ -14,10 +14,12 @@ import MainFooter from "components/common/MainFooter";
 import Sidebar from "components/common/Sidebar";
 import MainHeader from "components/common/Headers/MainHeader";
 import SentPopup from "components/common/Modals/SentPopup";
+import HomeHead from "components/common/Head/HomeHead";
 
 const Home = () => {
   return (
     <>
+      <HomeHead />
       <Topbar />
       <MainHeader />
       <Hero />

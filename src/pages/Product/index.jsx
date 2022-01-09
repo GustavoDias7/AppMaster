@@ -6,6 +6,7 @@ import { useSearchParams } from "react-router-dom";
 import ProductPath from "components/Product/ProductPath";
 import ProductDetails from "components/Product/ProductDetails";
 import MainFooter from "components/common/MainFooter";
+import ProductHead from "components/common/Head/ProductHead";
 
 const Product = () => {
   let [searchParams] = useSearchParams();
@@ -27,6 +28,7 @@ const Product = () => {
   if (!selectedProduct) return null;
   return (
     <>
+      <ProductHead />
       <Topbar />
       <SimpleHeader />
       <ProductPath title={selectedProduct.title} />
