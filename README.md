@@ -1,5 +1,8 @@
 # AppMaster
 
+## Demo
+Click <a href="https://appmaster.netlify.app/">here</a> to access the website.
+
 ## Features
 
 ## 1) ScrollToElement Component
