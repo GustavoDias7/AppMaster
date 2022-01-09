@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import useApp from "context/GlobalContext";
 import Title from "components/common/Title";
 import Button from "components/common/Buttons/Button";
@@ -9,10 +9,18 @@ import { Form } from "@unform/web";
 import * as yup from "yup";
 import { contactSchema } from "utils/schemas";
 import Subtitle from "components/common/Subtitle";
+import { contactAttributes } from "utils/inputAttributes";
 
 const Contacts = () => {
-  const { setSentPopup } = useApp();
+  const { setSentPopup, formData, setFormData } = useApp();
   const formRef = useRef(null);
+
+  useEffect(() => {
+    // Set single field value
+    formRef.current.setFieldValue("name", formData.name);
+    formRef.current.setFieldValue("email", formData.email);
+    formRef.current.setFieldValue("subject", formData.subject);
+  }, [formData]);
 
   const handleFormSubmit = async (data, { reset }) => {
     try {
@@ -27,9 +35,13 @@ const Contacts = () => {
 
       // Validation passed
 
+      // Merge all datas
+      const formattedData = Object.assign({}, formData, data);
+      setFormData(formattedData);
+      window.sessionStorage.setItem("formData", JSON.stringify(formattedData));
+
       setSentPopup(true);
       reset();
-      console.log(data);
     } catch (err) {
       const validationErrors = {};
 
@@ -71,12 +83,12 @@ const Contacts = () => {
         </FlexWrapper>
 
         <Form id="contact-form" ref={formRef} onSubmit={handleFormSubmit}>
-          <FlexWrapper>
-            <Input id="name" name="name" placeholder="Seu nome" />
-            <Input id="email" name="email" placeholder="Seu Email" />
+          <FlexWrapper version="5">
+            <Input {...contactAttributes.name} />
+            <Input {...contactAttributes.email} />
           </FlexWrapper>
-          <Input id="subject" name="subject" placeholder="Assunto do Email" />
-          <Textarea id="message" name="message" placeholder="Sua mensagem" />
+          <Input {...contactAttributes.subject} />
+          <Textarea {...contactAttributes.message} />
           <Button id="fmButton" type="submit">
             Enviar
           </Button>

@@ -1,20 +1,18 @@
-.formRow {
-  position: relative;
+.label {
+  display: block;
+  color: #666666;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  width: fit-content;
+  width: -moz-fit-content;
 }
 
-.error {
-  position: absolute;
-  left: 0;
-  bottom: 8px;
-  font-size: 12px;
-  color: #f33838;
-}
+/* generic styles */
 
 input,
 textarea {
   width: 100%;
-  margin-bottom: 24px;
-  padding: 10px 14px;
+  padding: 10px 12px;
   font-size: 16px;
   outline: none;
   transition: 0.4s;
@@ -32,4 +30,19 @@ textarea:focus {
 textarea {
   resize: vertical;
   min-height: 120px;
+}
+
+/* error */
+
+.errorMessage {
+  font-size: 12px;
+  color: #f33838;
+  margin-top: 2px;
+}
+
+/* rows */
+
+.formRow {
+  line-height: 1;
+  margin-bottom: 1rem;
 }

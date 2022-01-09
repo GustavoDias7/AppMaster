@@ -90,3 +90,16 @@
   }
 }
 /* version 4 */
+
+/* custom version */
+
+/* version 5 */
+[version="5"] > * {
+  width: calc(50% - 12px);
+}
+@media (max-width: 768px) {
+  [version="5"] > * {
+    width: 100%;
+  }
+}
+/* version 5 */

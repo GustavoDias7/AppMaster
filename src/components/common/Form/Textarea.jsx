@@ -1,9 +1,10 @@
 import { useField } from "@unform/core";
 import React, { useEffect, useRef } from "react";
-import Error from "./Error";
-import styles from "./Form.module.css";
+import ErrorMessage from "./ErrorMessage";
+import FormRow from "./FormRow";
+import Label from "./Label";
 
-const Textarea = ({ id, name, placeholder, ...rest }) => {
+const Textarea = ({ id, name, label = null, placeholder = "", ...rest }) => {
   const inputRef = useRef(null);
   const { fieldName, defaultValue, registerField, error } = useField(name);
 
@@ -24,17 +25,18 @@ const Textarea = ({ id, name, placeholder, ...rest }) => {
   }, [fieldName, registerField]);
 
   return (
-    <div className={styles.formRow}>
+    <FormRow>
+      {label && <Label htmlFor={id}>{label}</Label>}
       <textarea
         id={id}
         name={name}
         ref={inputRef}
         placeholder={placeholder}
-        defaultValue={defaultValue}
+        defaultValue={defaultValue !== undefined ? defaultValue : ""}
         {...rest}
       />
-      {error && <Error>{error}</Error>}
-    </div>
+      {error && <ErrorMessage>{error}</ErrorMessage>}
+    </FormRow>
   );
 };
 

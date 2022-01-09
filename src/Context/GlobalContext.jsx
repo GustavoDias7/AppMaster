@@ -5,8 +5,17 @@ const GlobalContext = createContext();
 export const GlobalStorage = ({ children }) => {
   const [sidebar, setSidebar] = useState(false);
   const [sentPopup, setSentPopup] = useState(false);
-  const [zoom, setZoom] = React.useState(false);
-  const [indexImage, setIndexImage] = React.useState(0);
+  const [zoom, setZoom] = useState(false);
+
+  const [indexImage, setIndexImage] = useState(0);
+  const [formData, setFormData] = useState(
+    JSON.parse(window.sessionStorage.getItem("formData")) || {
+      name: "",
+      email: "",
+      subject: "",
+      message: "",
+    }
+  );
 
   const values = {
     sidebar,
@@ -17,6 +26,8 @@ export const GlobalStorage = ({ children }) => {
     setZoom,
     indexImage,
     setIndexImage,
+    formData,
+    setFormData,
   };
   return (
     <GlobalContext.Provider value={values}>{children}</GlobalContext.Provider>

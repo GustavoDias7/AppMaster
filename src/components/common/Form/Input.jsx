@@ -1,11 +1,20 @@
 import React, { useEffect, useRef } from "react";
 import { useField } from "@unform/core";
-import Error from "./Error";
-import styles from "./Form.module.css";
+import ErrorMessage from "./ErrorMessage";
+import FormRow from "./FormRow";
+import Label from "./Label";
 
-const Input = ({ type = "text", id, name, placeholder, ...rest }) => {
+const Input = ({
+  type = "text",
+  id,
+  name,
+  label = null,
+  placeholder = "",
+  defaultValue = "",
+  ...rest
+}) => {
   const inputRef = useRef(null);
-  const { fieldName, defaultValue, registerField, error } = useField(name);
+  const { fieldName, registerField, error } = useField(name);
 
   useEffect(() => {
     registerField({
@@ -24,7 +33,8 @@ const Input = ({ type = "text", id, name, placeholder, ...rest }) => {
   }, [fieldName, registerField]);
 
   return (
-    <div className={styles.formRow}>
+    <FormRow>
+      {label && <Label htmlFor={id}>{label}</Label>}
       <input
         type={type}
         id={id}
@@ -34,8 +44,8 @@ const Input = ({ type = "text", id, name, placeholder, ...rest }) => {
         defaultValue={defaultValue}
         {...rest}
       />
-      {error && <Error>{error}</Error>}
-    </div>
+      {error && <ErrorMessage>{error}</ErrorMessage>}
+    </FormRow>
   );
 };
 
