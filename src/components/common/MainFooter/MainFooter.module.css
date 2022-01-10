@@ -1,0 +1,12 @@
+.mainFooter {
+  padding: 30px 0;
+  background-color: #7b2cbf;
+}
+.mainFooter p {
+  color: #fff;
+  text-align: center;
+}
+.mainFooter p a {
+  color: #fff;
+  font-weight: bold;
+}

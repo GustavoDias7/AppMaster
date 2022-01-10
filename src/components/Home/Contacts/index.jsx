@@ -10,6 +10,7 @@ import * as yup from "yup";
 import { contactSchema } from "utils/schemas";
 import Subtitle from "components/common/Subtitle";
 import { contactAttributes } from "utils/inputAttributes";
+import styles from "./Contacts.module.css";
 
 const Contacts = () => {
   const { setSentPopup, formData, setFormData } = useApp();
@@ -65,24 +66,24 @@ const Contacts = () => {
         </Subtitle>
 
         <FlexWrapper version="2">
-          <div className="contact-card">
+          <div className={styles.box}>
             <i className="fas fa-map-marker-alt" />
             <h3>Endereço</h3>
             <p>Rio de Janeiro-RJ, Brasil</p>
           </div>
-          <div className="contact-card">
+          <div className={styles.box}>
             <i className="fas fa-mobile-alt" />
             <h3>Telefone</h3>
             <p>+55 (21)4002-8922</p>
           </div>
-          <div className="contact-card">
+          <div className={styles.box}>
             <i className="far fa-envelope" />
             <h3>Email</h3>
             <p>appmaster@gmail.com</p>
           </div>
         </FlexWrapper>
 
-        <Form id="contact-form" ref={formRef} onSubmit={handleFormSubmit}>
+        <Form className={styles.form} ref={formRef} onSubmit={handleFormSubmit}>
           <FlexWrapper version="5">
             <Input {...contactAttributes.name} />
             <Input {...contactAttributes.email} />

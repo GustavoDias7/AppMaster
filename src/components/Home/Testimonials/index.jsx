@@ -5,6 +5,7 @@ import Avatar2 from "assets/images/avatar-02.jpg";
 import Avatar3 from "assets/images/avatar-03.jpg";
 import Title from "components/common/Title";
 import Subtitle from "components/common/Subtitle";
+import styles from "./Testimonials.module.css";
 
 const testimonialInfo = [
   {
@@ -51,14 +52,14 @@ const settings = {
 const TestimonialsCard = ({ testi }) => {
   const { quote, avatar, name, prof } = testi;
   return (
-    <div className="testimonial-card">
-      <div className="content">
-        <div className="quote">
-          <i className="fas fa-quote-left"></i>
+    <div>
+      <div className={styles.content}>
+        <div className={styles.quote}>
+          <i className="fas fa-quote-left" />
           <p>{quote}</p>
-          <i className="fas fa-quote-right"></i>
+          <i className="fas fa-quote-right" />
         </div>
-        <img className="avatar" src={avatar} alt="avatar" />
+        <img className={styles.avatar} src={avatar} alt="avatar" />
         <h3>{name}</h3>
         <p>{prof}</p>
       </div>
@@ -76,7 +77,7 @@ const Testimonials = () => {
           prestados.
         </Subtitle>
 
-        <Slider {...settings} id="testimonials-container">
+        <Slider {...settings}>
           {testimonialInfo.map((testi) => (
             <TestimonialsCard testi={testi} key={testi.name} />
           ))}

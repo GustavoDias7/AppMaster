@@ -3,10 +3,11 @@ import Title from "components/common/Title";
 import Button from "components/common/Buttons/Button";
 import scrollToElement from "utils/scrollToElement";
 import Subtitle from "components/common/Subtitle";
+import styles from "./Cta.module.css";
 
 const Cta = () => {
   return (
-    <section id="cta">
+    <section className={styles.cta} id="cta">
       <div className="container">
         <Title>Fale conosco</Title>
         <Subtitle>

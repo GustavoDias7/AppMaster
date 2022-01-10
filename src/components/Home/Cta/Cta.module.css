@@ -1,0 +1,13 @@
+.cta {
+  padding: 40px 0;
+  text-align: center;
+  background-color: #7b2cbf;
+}
+.cta h2 {
+  color: #fff;
+}
+.cta p {
+  color: #fff;
+  max-width: 750px;
+  margin: 0px auto 32px;
+}

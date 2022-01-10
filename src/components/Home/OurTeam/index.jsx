@@ -6,8 +6,8 @@ import Avatar04 from "assets/images/avatar-07.jpg";
 import Title from "components/common/Title";
 import SocialLinks from "components/common/SocialLinks";
 import FlexWrapper from "components/common/FlexWrapper";
+import styles from "./OurTeam.module.css";
 
-/* === OUR-TEAM === */
 const teamInfos = [
   {
     image: Avatar01,
@@ -55,21 +55,13 @@ const teamInfos = [
   },
 ];
 
-const TeamCard = ({ team }) => {
-  const { image, name, type, links } = team;
-
+const TeamCard = ({ image, name, type, links }) => {
   return (
-    <figure className="team-card">
-      <div className="image-team-container">
-        <img
-          src={image}
-          alt={name}
-          className="image-team"
-          width="273"
-          height="328"
-        />
+    <figure>
+      <div className={styles.image}>
+        <img src={image} alt={name} width="273" height="328" />
       </div>
-      <div className="team-descripttion">
+      <div className={styles.descripttion}>
         <h3>{name}</h3>
         <p>{type}</p>
         <SocialLinks color="#fff" {...links} />
@@ -85,7 +77,7 @@ const OurTeam = () => {
         <Title>Nosso Time</Title>
         <FlexWrapper version="1">
           {teamInfos.map((team) => (
-            <TeamCard team={team} key={team.name} />
+            <TeamCard {...team} key={team.name} />
           ))}
         </FlexWrapper>
       </div>

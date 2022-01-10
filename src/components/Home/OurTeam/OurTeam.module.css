@@ -1,0 +1,28 @@
+.image {
+  position: relative;
+  width: 100%;
+  padding-top: 120%;
+}
+.image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.descripttion {
+  text-align: center;
+  padding: 16px 8px;
+  background-color: #7b2cbf;
+}
+.descripttion h3,
+.descripttion p {
+  color: #fff;
+  margin-bottom: 8px;
+}
+.descripttion p {
+  font-size: 14px;
+  font-weight: 300;
+  font-style: italic;
+}
